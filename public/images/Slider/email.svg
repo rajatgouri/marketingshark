@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="70" height="44" viewBox="0 0 70 44">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" y1="-0.124" x2="0.5" y2="0.66" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#00a0ff"/>
+      <stop offset="1" stop-color="#0a5594"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_9" data-name="Group 9" transform="translate(-218 -544)">
+    <g id="Rectangle_6" data-name="Rectangle 6" transform="translate(218 544)" fill="#fff" stroke="#000" stroke-width="1">
+      <rect width="70" height="44" stroke="none"/>
+      <rect x="0.5" y="0.5" width="69" height="43" fill="none"/>
+    </g>
+    <path id="Path_13" data-name="Path 13" d="M0,26,29.536,3.528" transform="translate(218.5 561.5)" fill="none" stroke="#000" stroke-width="1"/>
+    <path id="Path_14" data-name="Path 14" d="M24,26-5.267,3.528" transform="translate(263.5 561.5)" fill="none" stroke="#000" stroke-width="1"/>
+    <g id="Polygon_1" data-name="Polygon 1" transform="translate(288 569) rotate(180)" fill="url(#linear-gradient)">
+      <path d="M 68.43975830078125 24.5 L 1.560238003730774 24.5 L 35 0.6144556999206543 L 68.43975830078125 24.5 Z" stroke="none"/>
+      <path d="M 35 1.228900909423828 L 3.120460510253906 24 L 66.87953948974609 24 L 35 1.228900909423828 M 35 0 L 70 25 L 0 25 L 35 0 Z" stroke="none"/>
+    </g>
+    <g id="Polygon_2" data-name="Polygon 2" transform="translate(288 569) rotate(180)" fill="none">
+      <path d="M35,0,70,25H0Z" stroke="none"/>
+      <path d="M 35 1.228900909423828 L 3.120460510253906 24 L 66.87953948974609 24 L 35 1.228900909423828 M 35 0 L 70 25 L 0 25 L 35 0 Z" stroke="none"/>
+    </g>
+  </g>
+</svg>

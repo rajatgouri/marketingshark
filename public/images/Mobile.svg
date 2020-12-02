@@ -1,0 +1,14 @@
+<svg id="Component_17_4" data-name="Component 17 – 4" xmlns="http://www.w3.org/2000/svg" width="75.534" height="129.486" viewBox="0 0 75.534 129.486">
+  <g id="Group_127" data-name="Group 127">
+    <path id="Path_242" data-name="Path 242" d="M62.79,129.486H12.744A12.761,12.761,0,0,1,0,116.743v-104A12.761,12.761,0,0,1,12.744,0H62.79A12.761,12.761,0,0,1,75.534,12.744v104A12.761,12.761,0,0,1,62.79,129.486ZM12.744,5.4A7.357,7.357,0,0,0,5.4,12.744v104a7.357,7.357,0,0,0,7.348,7.348H62.79a7.357,7.357,0,0,0,7.348-7.348v-104A7.357,7.357,0,0,0,62.79,5.4Z" fill="#333"/>
+  </g>
+  <g id="Group_128" data-name="Group 128" transform="translate(0 102.51)">
+    <path id="Path_243" data-name="Path 243" d="M72.836,24.4H2.7a2.7,2.7,0,1,1,0-5.4H72.836a2.7,2.7,0,1,1,0,5.4Z" transform="translate(0 -19)" fill="#333"/>
+  </g>
+  <g id="Group_129" data-name="Group 129" transform="translate(26.976 10.79)">
+    <path id="Path_244" data-name="Path 244" d="M23.883,7.4H7.7A2.7,2.7,0,0,1,7.7,2H23.883a2.7,2.7,0,0,1,0,5.4Z" transform="translate(-5 -2)" fill="#333"/>
+  </g>
+  <g id="Group_130" data-name="Group 130" transform="translate(32.372 113.3)">
+    <path id="Path_245" data-name="Path 245" d="M14.093,26.4H8.7a2.7,2.7,0,1,1,0-5.4h5.4a2.7,2.7,0,1,1,0,5.4Z" transform="translate(-6 -21)" fill="#333"/>
+  </g>
+</svg>

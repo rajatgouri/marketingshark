@@ -1,0 +1,229 @@
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalCenterTitle"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle">
+          NEW STEP
+        </h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div id="rx4" class="text-center" style="display: none;">
+          <div class="spinner-grow text-primary" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+          <div class="spinner-grow text-secondary" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+          <div class="spinner-grow text-success" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+          <div class="spinner-grow text-danger" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+          <div class="spinner-grow text-warning" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+          <div class="spinner-grow text-info" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+        </div>
+        <form action="/add-step" method="POST" id="step-form"> 
+          <div class="form-group">
+            <label>Name Of Funnel Step</label>
+            <input
+              class="form-control"
+              type="text"
+              name="name"
+              placeholder="Name of your page"
+              required
+            />
+          </div>
+          <input
+              id="pageId"
+              class="form-control"
+              type="hidden"
+              name="page"
+              value = '' 
+            />
+          <input type="hidden" name="funnelId" value="<%= funnel.id %>" />
+          <div class="text-center">
+            <button
+              type="submit"
+              class="btn btn-primary btn-sm pl-3 pr-3"
+              id="stepbtn"
+            >
+              Create Step
+            </button>
+          </div>
+        </form>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
+  class="modal fade"
+  id="stepModal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="stepModalCenterTitle"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered step-modal-dialog" role="document" >
+    <div class="modal-content" style='max-height: 90%; position: absolute;overflow: auto !important'>
+      <div class="modal-header">
+        <h5 class="modal-title" id="stepModalCenterTitle">
+          Choose a Page 
+        </h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+        <% for (let i=0; i< pages.length ; i++) { %>
+        <h4><%= pages[i].type %></h4>
+        
+        <div class="row pages-container modal-pages"   pages="<%= pages[i].pages.length %>">
+
+          <% for(let j=0; j < pages[i].pages.length; j++){ %>
+            <div class="col-md-3 page mb-4" id="<%= pages[i].pages[j]._id %>" >
+              <div class="border rounded h-100 shadow-sm">
+                <h6 class="bg-shade text-white mb-0"><%= pages[i].pages[j].name %></h6>
+                <img
+                  src="<%= pages[i].pages[j].thumbnail %>"
+                  class="StandTempImg"
+                  width="100%"
+                  alt="2temp"
+                />
+              </div>
+
+            </div>  
+          <% } %>
+
+          <div class="col-12 text-center load-more" id="<%= pages[i].pages[0].type %>" type="<%= pages[i].pages[0].type %>" ><u>Load More</u></div>
+
+        </div>
+
+
+        <% } %>
+       
+
+       
+
+
+        <div class="clear-fix custom-page" >
+          <div class="float-left"></div>
+          <div class="float-right">
+              <button class="btn text-white bg-shade p-3 custom-page-button">
+                <img src="/images/Group 66.svg" height="30" width="25">
+              </button>
+          </div>
+        </div>        
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  jQuery(() => {
+      
+
+      $('.page').on('click', (e) => {
+        pageId = e.target.parentElement.parentElement.getAttribute('id');
+        hideShowModal(pageId)
+      });
+
+      $('.custom-page-button').on('click', () => {
+        hideShowModal('')
+      })
+
+
+      function hideShowModal(id) {
+        console.log(id)
+        $('#stepModal').modal('hide');
+        $('#pageId').val(id)
+        setTimeout(() => {
+          $('#exampleModal').modal('show');
+        } ,1000)
+      }    
+      
+      $('#stepbtn').on('click', () => {
+          $('#rx4').css('display', 'block');
+      })
+
+
+      $('#step-form').on('submit', (e) => {
+        $('#stepbtn').attr('disabled', true);
+        $('#stepbtn').text('Loading ... ',);
+
+      })
+
+      $('.load-more').on('click', function(e) {
+        e.preventDefault();
+        let type = $(this).attr('type')
+        
+        let total = $(this)[0].parentElement.getAttribute('pages')
+        console.log(total)
+        $.ajax({
+            type: "POST",
+            url: '/get-pages',
+            data: {
+              type: type,
+              total: total
+            },
+            success: function (data) {
+              element.setAttribute('pages', total + data.total)
+              let pages = data.pages;
+
+              console.log(data)
+              for (let i = 0 ; i< pages.length; i++) {
+                
+                let col = `
+                <div class="col-md-3 page mb-4" id="${pages[i]._id}" >
+                  <div class="border rounded h-100 shadow-sm">
+                    <h6 class="bg-shade text-white mb-0"> ${pages[i].name }</h6>
+                    <img
+                      src="${pages[i].thumbnail}"
+                      class="StandTempImg"
+                      width="100%"
+                      alt="2temp"
+                    />
+                  </div>
+
+                </div>  
+                `
+                $(`#${type}`).prepend(col)
+              }
+            },
+            error: function (data) {
+              console.log(data)
+            }
+        });
+        
+
+      })
+  })
+  
+</script>

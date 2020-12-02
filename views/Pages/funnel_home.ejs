@@ -1,0 +1,1450 @@
+<%- include('../Partials/header.ejs') %>
+<div
+  class="container"
+  style="padding-right: 0px !important; padding-left: 0 !important;"
+>
+  <div class="row">
+    <div class="col-md-12 filter_content_1">
+      <span> Lead Capture for Real Estate…</span>
+      <div class="bottom_left">
+        <a href="/templates"
+          ><u><i class="fa fa-angle-left"></i>Back to funnels</u></a
+        >
+      </div>
+      <div class="funnel_home">
+        <div class="col-lg-3 my_sidebar" id="myFilter">
+          <div class="sidebar main_div">
+            <p>Funnel Steps</p>
+            <div class="sidebar_buttons">
+              <% funnel.steps.map(step => { %>
+              <div class="btn1">
+                <a
+                  href="/funnel_home/<%= funnel.id %>?stepid=<%= stepid=step.id %>"
+                  class="list-group-item steps"
+                  id="<%= step.id %>"
+                  ><img
+                    src="/images/Page-in-opt.svg"
+                    alt="group_40"
+                    width="18%" />
+                  <span style="color: #fff; padding-left: 26px;">
+                    <%= step.stepName.split('_').length > 2 ? step.stepName.split('_').slice(0,-1).join('_') :  step.stepName.split('_').join('_') %></span
+                  >
+                  <img src="/images/white arrow.svg" width="3%" alt="Polygon_4"
+                /></a>
+              </div>
+              <% }) %>
+              <!-- <div class="btn2">
+                <a href="#" class="list-group-item border"
+                  ><img
+                    src="/images/confirm page.svg"
+                    alt="group_41"
+                    width="19%" />
+                  <span> Confirm Page</span>
+                  <img
+                    src="/images/grey arrow.svg"
+                    width="3%"
+                    height="25px"
+                    alt="Polygon_5"
+                /></a>
+              </div> -->
+              <!-- <div class="btn3"><a type="button" class="list-group-item border" data-toggle="modal"
+                                    data-target="#exampleModal">
+                                    <span style="color: #34c3eb;">+ADD NEW STEP</span>
+                            </div></div> -->
+              <div class="btn3">
+                <a
+                  type="button"
+                  class="list-group-item border add-new-step"
+                  data-toggle="modal"
+                  data-target="#stepModal"
+                  ><span style="color: #34c3eb;">+ADD NEW STEP</span></a
+                >
+              </div>
+              <%- include('../Partials/stepForm.ejs') %>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-9 sidebar_right">
+          <!-- Nav tabs -->
+          <ul class="nav nav-tabs">
+            <li class="col-md-3 nav-item tabs_custom">
+              <a
+                class="nav-link active"
+                data-toggle="tab"
+                href="#home"
+                onclick="myFunctionNew()"
+              >
+                <!-- <img src="/images/Group 58@2x.png" alt="group_58" id="myImg" width="33%">  -->
+                <svg
+                  id="Group_58"
+                  data-name="Group 58"
+                  width="56"
+                  viewBox="0 0 52.05 46.4"
+                >
+                  <defs>
+                    <linearGradient
+                      id="linear-gradient"
+                      x1="24.25"
+                      y1="35.66"
+                      x2="24.25"
+                      y2="3.41"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop offset="0" stop-color="#0fedb2" />
+                      <stop offset="1" stop-color="#1da2f4" />
+                    </linearGradient>
+                    <linearGradient
+                      id="linear-gradient-2"
+                      x1="27.8"
+                      y1="32.25"
+                      x2="27.8"
+                      y2="0"
+                      xlink:href="#linear-gradient"
+                    />
+                    <linearGradient
+                      id="linear-gradient-3"
+                      x1="25.33"
+                      y1="16.34"
+                      x2="25.33"
+                      y2="14.52"
+                      xlink:href="#linear-gradient"
+                    />
+                    <linearGradient
+                      id="linear-gradient-4"
+                      x1="20.65"
+                      y1="9.48"
+                      x2="20.65"
+                      y2="7.66"
+                      xlink:href="#linear-gradient"
+                    />
+                    <linearGradient
+                      id="linear-gradient-5"
+                      x1="17.01"
+                      y1="16.34"
+                      x2="17.01"
+                      y2="14.52"
+                      xlink:href="#linear-gradient"
+                    />
+                    <linearGradient
+                      id="linear-gradient-6"
+                      x1="26.45"
+                      y1="21.49"
+                      x2="26.45"
+                      y2="19.68"
+                      xlink:href="#linear-gradient"
+                    />
+                    <linearGradient
+                      id="linear-gradient-7"
+                      x1="17.01"
+                      y1="21.49"
+                      x2="17.01"
+                      y2="19.68"
+                      xlink:href="#linear-gradient"
+                    />
+                    <linearGradient
+                      id="linear-gradient-8"
+                      x1="23.89"
+                      y1="26.64"
+                      x2="23.89"
+                      y2="24.82"
+                      xlink:href="#linear-gradient"
+                    />
+                    <linearGradient
+                      id="linear-gradient-9"
+                      x1="26.45"
+                      y1="31.78"
+                      x2="26.45"
+                      y2="29.96"
+                      xlink:href="#linear-gradient"
+                    />
+                    <linearGradient
+                      id="linear-gradient-10"
+                      x1="17.01"
+                      y1="31.78"
+                      x2="17.01"
+                      y2="29.96"
+                      xlink:href="#linear-gradient"
+                    />
+                    <linearGradient
+                      id="linear-gradient-11"
+                      x1="26.15"
+                      y1="41.36"
+                      x2="26.15"
+                      y2="11.36"
+                      xlink:href="#linear-gradient"
+                    />
+                    <linearGradient
+                      id="linear-gradient-12"
+                      x1="26.03"
+                      y1="46.4"
+                      x2="26.03"
+                      y2="16.4"
+                      xlink:href="#linear-gradient"
+                    />
+                  </defs>
+                  <path
+                    id="Path_126"
+                    data-name="Path 126"
+                    class="cls-1 as"
+                    d="M36.56,11.31h0a1.09,1.09,0,0,0-.09-.23l0,0a.75.75,0,0,0-.15-.2L29.15,3.69A.7.7,0,0,0,29,3.54l-.05,0a.92.92,0,0,0-.23-.09h0l-.17,0H12.85a.91.91,0,0,0-.91.91h0V34.75a.91.91,0,0,0,.91.91H35.66a.9.9,0,0,0,.9-.91V11.48A1,1,0,0,0,36.56,11.31Zm-3.09-.74h-4V6.51Zm1.28,23.28h-21V5.23H27.6v6.24a.9.9,0,0,0,.91.9h6.25Z"
+                    transform="translate(0 0)"
+                  />
+                  <path
+                    id="Path_127"
+                    data-name="Path 127"
+                    class="cls-2 as"
+                    d="M39.21,0H16.39a.89.89,0,0,0-.9.89h0V3.41H17.3V1.81h21V30.43H36.57v1.82h2.64a.92.92,0,0,0,.91-.92V.9a.9.9,0,0,0-.9-.9Z"
+                    transform="translate(0 0)"
+                  />
+                  <path
+                    id="Path_128"
+                    data-name="Path 128"
+                    class="cls-3 as"
+                    d="M29.84,16.34h-9a.91.91,0,1,1,0-1.82h9a.91.91,0,1,1,0,1.82Z"
+                    transform="translate(0 0)"
+                  />
+                  <path
+                    id="Path_129"
+                    data-name="Path 129"
+                    class="cls-4 as"
+                    d="M24.9,9.48H16.4a.91.91,0,0,1,0-1.82h8.5a.91.91,0,0,1,0,1.82Z"
+                    transform="translate(0 0)"
+                  />
+                  <path
+                    id="Path_130"
+                    data-name="Path 130"
+                    class="cls-5 as"
+                    d="M17.63,16.34H16.39a.91.91,0,0,1,0-1.82h1.24a.91.91,0,1,1,0,1.82Z"
+                    transform="translate(0 0)"
+                  />
+                  <path
+                    id="Path_131"
+                    data-name="Path 131"
+                    class="cls-6 as"
+                    d="M32.08,21.49H20.81a.91.91,0,1,1,0-1.81H32.08a.91.91,0,1,1,0,1.81Z"
+                    transform="translate(0 0)"
+                  />
+                  <path
+                    id="Path_132"
+                    data-name="Path 132"
+                    class="cls-7 as"
+                    d="M17.63,21.49H16.39a.91.91,0,0,1,0-1.81h1.24a.91.91,0,1,1,0,1.81Z"
+                    transform="translate(0 0)"
+                  />
+                  <path
+                    id="Path_133"
+                    data-name="Path 133"
+                    class="cls-8 as"
+                    d="M27,26.64H20.81a.91.91,0,0,1,0-1.82H27a.91.91,0,0,1,0,1.82Z"
+                    transform="translate(0 0)"
+                  />
+                  <path
+                    id="Path_134"
+                    data-name="Path 134"
+                    class="cls-9 as"
+                    d="M32.08,31.78H20.81a.91.91,0,0,1,0-1.82H32.08a.91.91,0,0,1,0,1.82Z"
+                    transform="translate(0 0)"
+                  />
+                  <path
+                    id="Path_135"
+                    data-name="Path 135"
+                    class="cls-10 as"
+                    d="M17.63,31.78H16.39a.91.91,0,0,1,0-1.82h1.24a.91.91,0,0,1,0,1.82Z"
+                    transform="translate(0 0)"
+                  />
+                  <path
+                    id="Path_136"
+                    data-name="Path 136"
+                    class="cls-11 as"
+                    d="M47.13,11.36h-7v1.82h7a.8.8,0,0,1,.8.8V38.74a.8.8,0,0,1-.8.8h-42a.8.8,0,0,1-.8-.8V14a.8.8,0,0,1,.8-.8h6.77V11.36H5.17A2.62,2.62,0,0,0,2.55,14V38.74a2.62,2.62,0,0,0,2.62,2.62h42a2.62,2.62,0,0,0,2.62-2.62V14A2.62,2.62,0,0,0,47.13,11.36Z"
+                    transform="translate(0 0)"
+                  />
+                  <path
+                    id="Path_137"
+                    data-name="Path 137"
+                    class="cls-12 as"
+                    d="M49.43,39.65H46.32v-21A2.29,2.29,0,0,0,44,16.4H40.12v1.81H44c.32,0,.54.2.54.39v21H7.8v-21c0-.18.22-.39.55-.39h3.59V16.4H8.35A2.3,2.3,0,0,0,6,18.6v21H2.63A2.63,2.63,0,0,0,0,42.27H0v1.5A2.62,2.62,0,0,0,2.63,46.4h46.8a2.62,2.62,0,0,0,2.62-2.62v-1.5A2.62,2.62,0,0,0,49.43,39.65Zm.8,4.13a.81.81,0,0,1-.8.81H2.63a.81.81,0,0,1-.81-.81v-1.5a.81.81,0,0,1,.81-.81H20a.67.67,0,0,0,0,.24.9.9,0,0,0,.9.91h10.3a.91.91,0,0,0,.91-.91h0a1,1,0,0,0,0-.24H49.43a.8.8,0,0,1,.8.81Z"
+                    transform="translate(0 0)"
+                  />
+                </svg>
+                <span style="margin-left: 19% !important; padding-right: 25px;"
+                  >STEPS</span
+                >
+              </a>
+            </li>
+            <li class="col-md-3 nav-item tabs_custom">
+              <a
+                class="nav-link"
+                data-toggle="tab"
+                href="#menu1"
+                onclick="myFunction()"
+              >
+                <!-- <img src="/images/Group 59@2x.png" alt="group_59" width="43%" id="myImg1"> -->
+                <svg
+                  id="Group_59"
+                  data-name="Group 59"
+                  width="71"
+                  viewBox="0 0 68.92 46.4"
+                >
+                  <defs>
+                    <linearGradient
+                      id="linear-gradient"
+                      x1="-266.16"
+                      y1="410.64"
+                      x2="-266.16"
+                      y2="409.64"
+                      gradientTransform="matrix(62.5, 0, 0, -39.73, 16670.95, 16314.6)"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop offset="0" stop-color="#1da2f4" />
+                      <stop offset="1" stop-color="#0fedb2" />
+                    </linearGradient>
+                    <linearGradient
+                      id="linear-gradient-2"
+                      x1="-266.57"
+                      y1="410.64"
+                      x2="-266.57"
+                      y2="409.64"
+                      gradientTransform="matrix(68.92, 0, 0, -39.73, 18407.4, 16321.51)"
+                      xlink:href="#linear-gradient"
+                    />
+                    <linearGradient
+                      id="linear-gradient-3"
+                      x1="-255.48"
+                      y1="265.64"
+                      x2="-255.48"
+                      y2="264.64"
+                      gradientTransform="matrix(18.05, 0, 0, -2.41, 4633.7, 650.4)"
+                      xlink:href="#linear-gradient"
+                    />
+                    <linearGradient
+                      id="linear-gradient-4"
+                      x1="-244.81"
+                      y1="265"
+                      x2="-244.81"
+                      y2="264"
+                      gradientTransform="matrix(10.55, 0, 0, -2.4, 2602.02, 650.76)"
+                      xlink:href="#linear-gradient"
+                    />
+                  </defs>
+                  <title>Group 59</title>
+                  <path
+                    id="Path_138"
+                    data-name="Path 138"
+                    class="cls-1 as"
+                    d="M62.4,39.73H6.85a3.48,3.48,0,0,1-3.48-3.47V3.47A3.48,3.48,0,0,1,6.85,0H62.4a3.47,3.47,0,0,1,3.47,3.47V36.25A3.47,3.47,0,0,1,62.4,39.73ZM6.85,2.4A1.07,1.07,0,0,0,5.77,3.47h0V36.25a1.09,1.09,0,0,0,1.08,1.08H62.4a1.09,1.09,0,0,0,1.07-1.08V3.47A1.06,1.06,0,0,0,62.4,2.4Z"
+                  />
+                  <path
+                    id="Path_139"
+                    data-name="Path 139"
+                    class="cls-2 as"
+                    d="M65.45,37.47H61.33V9.6A3,3,0,0,0,58.2,6.67H11A3,3,0,0,0,7.91,9.6V37.47H3.47A3.47,3.47,0,0,0,0,40.94v2A3.47,3.47,0,0,0,3.47,46.4h62a3.47,3.47,0,0,0,3.47-3.47v-2A3.47,3.47,0,0,0,65.45,37.47Zm-17.85,0V20.57l4.3,1V37.47Zm-6.78,0V25.22l4.38-3.61V37.47Zm-23.9,0V26.57l5.74,1v9.87Zm-6.6,0V31l4.19-3.36v9.84H10.32ZM25.06,27.26l5.07-3.11V37.47H25.06Zm7.48-3.62,5.87,1.89V37.46H32.54ZM54.31,21l4.62-6.45V37.47H54.31ZM11,9.08H58.2a.66.66,0,0,1,.72.52v.85L52.6,19.29l-5.92-1.41h0l-.26,0h0a.78.78,0,0,0-.26,0l-.07,0a.85.85,0,0,0-.17.06l-.09,0-.13.1,0,0-6.27,5.19L31.7,20.85h-.05l-.14,0h-.36l-.14,0-.09,0-.15.06-.06,0-7.09,4.36L16,24h-.51s0,0-.08,0l-.15.06-.08.05-.13.07,0,0L10.32,27.9V9.6C10.32,9.35,10.61,9.08,11,9.08ZM66.52,42.93A1.07,1.07,0,0,1,65.45,44h-62A1.07,1.07,0,0,1,2.4,42.93v-2a1.07,1.07,0,0,1,1.07-1.07h23a1.26,1.26,0,0,0-.05.33,1.2,1.2,0,0,0,1.2,1.2H41.27a1.2,1.2,0,0,0,1.2-1.2h0a1.26,1.26,0,0,0,0-.33h23a1.06,1.06,0,0,1,1.06,1.07h0v2Z"
+                  />
+                  <path
+                    id="Path_140"
+                    data-name="Path 140"
+                    class="cls-3 as"
+                    d="M31.34,12.61H15.71a1.21,1.21,0,1,1,0-2.41H31.34a1.21,1.21,0,1,1,0,2.41Z"
+                  />
+                  <path
+                    id="Path_141"
+                    data-name="Path 141"
+                    class="cls-4"
+                    d="M23.85,17.16H15.71a1.2,1.2,0,0,1,0-2.4h8.14a1.2,1.2,0,0,1,0,2.4Z"
+                  />
+                </svg>
+                <span class="stats_img">STATS</span>
+              </a>
+            </li>
+            <li class="col-md-3 nav-item tabs_custom">
+              <a
+                class="nav-link"
+                data-toggle="tab"
+                href="#menu2"
+                onclick="myFunction()"
+              >
+                <!-- <img src="/images/Group 60@2x.png" alt="group_60" width="31%" id="myImg2"> -->
+                <svg
+                  id="Group_60"
+                  data-name="Group 60"
+                  width="51"
+                  viewBox="0 0 49.11 46.4"
+                >
+                  <defs>
+                    <style></style>
+                    <linearGradient
+                      id="linear-gradient"
+                      x1="-271.01"
+                      y1="402.97"
+                      x2="-271.01"
+                      y2="401.97"
+                      gradientTransform="matrix(32.98, 0, 0, -21.84, 8971.37, 8820.69)"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop offset="0" stop-color="#1da2f4" />
+                      <stop offset="1" stop-color="#0fedb2" />
+                    </linearGradient>
+                    <linearGradient
+                      id="linear-gradient-2"
+                      x1="-271.18"
+                      y1="411.98"
+                      x2="-271.18"
+                      y2="410.98"
+                      gradientTransform="matrix(33.67, 0, 0, -46.4, 9146.48, 19116)"
+                      xlink:href="#linear-gradient"
+                    />
+                    <linearGradient
+                      id="linear-gradient-3"
+                      x1="-250.52"
+                      y1="242.35"
+                      x2="-250.52"
+                      y2="241.35"
+                      gradientTransform="matrix(9.66, 0, 0, -2.09, 2430.75, 513.17)"
+                      xlink:href="#linear-gradient"
+                    />
+                    <linearGradient
+                      id="linear-gradient-4"
+                      x1="-267.56"
+                      y1="242.35"
+                      x2="-267.56"
+                      y2="241.35"
+                      gradientTransform="matrix(23.45, 0, 0, -2.09, 6289.71, 518.04)"
+                      xlink:href="#linear-gradient"
+                    />
+                    <linearGradient
+                      id="linear-gradient-5"
+                      x1="-267.57"
+                      y1="241.67"
+                      x2="-267.57"
+                      y2="240.67"
+                      gradientTransform="matrix(23.47, 0, 0, -2.09, 6296.38, 519.57)"
+                      xlink:href="#linear-gradient"
+                    />
+                    <linearGradient
+                      id="linear-gradient-6"
+                      x1="-248.81"
+                      y1="242.01"
+                      x2="-248.81"
+                      y2="241.01"
+                      gradientTransform="matrix(9.12, 0, 0, -2.09, 2279.98, 526.11)"
+                      xlink:href="#linear-gradient"
+                    />
+                    <linearGradient
+                      id="linear-gradient-7"
+                      x1="-248.79"
+                      y1="241.58"
+                      x2="-248.79"
+                      y2="240.58"
+                      gradientTransform="matrix(9.12, 0, 0, -2.09, 2278.44, 528.89)"
+                      xlink:href="#linear-gradient"
+                    />
+                    <linearGradient
+                      id="linear-gradient-8"
+                      x1="-248.81"
+                      y1="242.01"
+                      x2="-248.81"
+                      y2="241.01"
+                      gradientTransform="matrix(9.12, 0, 0, -2.09, 2279.83, 535.87)"
+                      xlink:href="#linear-gradient"
+                    />
+                    <linearGradient
+                      id="linear-gradient-9"
+                      x1="-248.82"
+                      y1="242.35"
+                      x2="-248.82"
+                      y2="241.35"
+                      gradientTransform="matrix(9.13, 0, 0, -2.09, 2280.71, 542.42)"
+                      xlink:href="#linear-gradient"
+                    />
+                  </defs>
+                  <path
+                    id="Path_142"
+                    data-name="Path 142"
+                    class="cls-1 as"
+                    d="M48.39,21.13h0L48.26,21l0,0a2.63,2.63,0,0,0-1.71-.66H18.73A2.58,2.58,0,0,0,17,21l0,0a1.31,1.31,0,0,0-.12.11,0,0,0,0,0,0,0h0a2.54,2.54,0,0,0-.72,1.78V39.55a2.59,2.59,0,0,0,.67,1.73l.08.13a1.2,1.2,0,0,0,.34.25,2.57,2.57,0,0,0,1.51.49H46.51a2.49,2.49,0,0,0,1.65-.62h0a2.6,2.6,0,0,0,.93-2V22.91A2.58,2.58,0,0,0,48.39,21.13ZM18.22,23.75l8.35,7.53L18.22,38.8Zm18.13,6.8,0,0h0l-3.7,3.33-3.7-3.33h0l0,0-9-8.15H45.39Zm-8.21,2.14,3.78,3.41a1.06,1.06,0,0,0,1.4,0l3.79-3.41,8.2,7.36H19.94Zm10.53-1.41L47,23.75v15Z"
+                    transform="translate(0 0)"
+                  />
+                  <path
+                    id="Path_143"
+                    data-name="Path 143"
+                    class="cls-2 as"
+                    d="M31.58,42.15v2.16H2.09V2.09H31.58V20.31h2.09V1a1,1,0,0,0-1-1H1A1,1,0,0,0,0,1V45.36a1,1,0,0,0,1,1H32.62a1,1,0,0,0,1-1h0V42.15Z"
+                    transform="translate(0 0)"
+                  />
+                  <path
+                    id="Path_144"
+                    data-name="Path 144"
+                    class="cls-3 as"
+                    d="M13.73,7.78H6.16a1,1,0,0,1,0-2.1h7.57a1.05,1.05,0,0,1,0,2.1Z"
+                    transform="translate(0 0)"
+                  />
+                  <path
+                    id="Path_145"
+                    data-name="Path 145"
+                    class="cls-4 as"
+                    d="M27.51,12.65H6.16a1,1,0,1,1,0-2.09H27.51a1,1,0,1,1,0,2.09Z"
+                    transform="translate(0 0)"
+                  />
+                  <path
+                    id="Path_146"
+                    data-name="Path 146"
+                    class="cls-5 as"
+                    d="M27.51,17.53H6.16a1,1,0,0,1,0-2.09H27.51a1,1,0,0,1,.06,2.09Z"
+                    transform="translate(0 0)"
+                  />
+                  <path
+                    id="Path_147"
+                    data-name="Path 147"
+                    class="cls-6 as"
+                    d="M13.19,22.4h-7a1,1,0,0,1-1-1h0a1.06,1.06,0,0,1,1-1.05h7a1,1,0,1,1,0,2.09Z"
+                    transform="translate(0 0)"
+                  />
+                  <path
+                    id="Path_148"
+                    data-name="Path 148"
+                    class="cls-7 as"
+                    d="M13.19,27.28h-7a1,1,0,0,1,0-2.09h7a1,1,0,1,1,0,2.09Z"
+                    transform="translate(0 0)"
+                  />
+                  <path
+                    id="Path_149"
+                    data-name="Path 149"
+                    class="cls-8 as"
+                    d="M13.19,32.16h-7a1,1,0,1,1,0-2.09h7a1,1,0,1,1,0,2.09Z"
+                    transform="translate(0 0)"
+                  />
+                  <path
+                    id="Path_150"
+                    data-name="Path 150"
+                    class="cls-9 as"
+                    d="M13.19,37h-7a1,1,0,1,1,0-2.09h7a1,1,0,1,1,0,2.09Z"
+                    transform="translate(0 0)"
+                  />
+                </svg>
+                <span>CONTACTS</span>
+              </a>
+            </li>
+            <li class="col-md-3 nav-item tabs_custom">
+              <a
+                class="nav-link"
+                data-toggle="tab"
+                href="#menu3"
+                onclick="myFunction()"
+              >
+                <!-- <img src="/images/Group 61@2x.png" alt="group_61" width="29%" id="myImg3"> -->
+                <svg
+                  id="Group_61"
+                  data-name="Group 61"
+                  width="48"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  viewBox="0 0 46.49 46.48"
+                >
+                  <linearGradient
+                    id="linear-gradient"
+                    x1="-275.43"
+                    y1="412"
+                    x2="-275.43"
+                    y2="411"
+                    gradientTransform="matrix(46.49, 0, 0, -46.48, 12828.18, 19148.67)"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop offset="0" stop-color="#1da2f4" />
+                    <stop offset="1" stop-color="#0fedb2" />
+                  </linearGradient>
+                  <linearGradient
+                    id="linear-gradient-2"
+                    x1="-270.55"
+                    y1="405.55"
+                    x2="-270.55"
+                    y2="404.55"
+                    gradientTransform="matrix(25.75, 0, 0, -25.75, 6979.67, 10462.26)"
+                    xlink:href="#linear-gradient"
+                  />
+                  <linearGradient
+                    id="linear-gradient-3"
+                    x1="-270.09"
+                    y1="404.94"
+                    x2="-270.09"
+                    y2="403.94"
+                    gradientTransform="matrix(24.71, 0, 0, -24.71, 6705.94, 10006.55)"
+                    xlink:href="#linear-gradient"
+                  />
+                  <path
+                    id="Path_111"
+                    data-name="Path 111"
+                    class="cls-1 as"
+                    d="M29.49,43.56a10,10,0,0,1-2.67-9.24L12.17,19.66A10.34,10.34,0,0,1,10,19.9,9.95,9.95,0,0,1,.4,7.16a1,1,0,0,1,.72-.7,1,1,0,0,1,1,.26l6.84,6.85,3.49-1.16,1.16-3.5L6.73,2.07a1,1,0,0,1-.26-1A1,1,0,0,1,7.16.4a9.94,9.94,0,0,1,12.5,11.76L34.32,26.82a10.26,10.26,0,0,1,2.21-.25,10,10,0,0,1,10,10,10.19,10.19,0,0,1-.4,2.8,1,1,0,0,1-1.24.69,1.1,1.1,0,0,1-.44-.26L37.56,32.9l-3.49,1.17-1.16,3.49,6.84,6.84a1,1,0,0,1,0,1.41,1,1,0,0,1-.44.27,10.19,10.19,0,0,1-2.8.4h0A9.89,9.89,0,0,1,29.49,43.56Zm1.56-5a1,1,0,0,1-.25-1L32.32,33a1,1,0,0,1,.64-.64l4.55-1.52a1,1,0,0,1,1,.25L44.46,37A7.93,7.93,0,0,0,37,28.6l-.44,0a7.94,7.94,0,0,0-2.22.32,1,1,0,0,1-1-.25L17.83,13.18a1,1,0,0,1-.25-1A8,8,0,0,0,9.52,2l5.92,5.92a1,1,0,0,1,.24,1l-1.52,4.55a1,1,0,0,1-.64.63L9,15.67a1,1,0,0,1-1-.23L2,9.52a7.94,7.94,0,0,0,10.16,8.06,1.05,1.05,0,0,1,1,.25L28.66,33.31a1,1,0,0,1,.24,1,8,8,0,0,0,2,7.86,7.85,7.85,0,0,0,5.6,2.32H37Z"
+                    transform="translate(0 0)"
+                  />
+                  <path
+                    id="Path_112"
+                    data-name="Path 112"
+                    class="cls-2 as"
+                    d="M23.76,22.72C21.7,20.65,19,20.12,17.6,21.5l-.11.13h0L1.53,37.57A5.21,5.21,0,1,0,8.9,45L25,28.87C26.37,27.49,25.83,24.78,23.76,22.72Zm-21,16.14L17,24.67A6.6,6.6,0,0,0,18.21,27l-15.94,16A3.39,3.39,0,0,1,2.81,38.86Zm4.8,4.8a3.39,3.39,0,0,1-4.05.55L19.5,28.26a6.69,6.69,0,0,0,2.3,1.21Zm12.5-17.3c-1.37-1.37-1.77-3-1.21-3.58s2.2-.16,3.58,1.22,1.77,3,1.21,3.58-2.21.16-3.58-1.21Z"
+                    transform="translate(0 0)"
+                  />
+                  <path
+                    id="Path_113"
+                    data-name="Path 113"
+                    class="cls-3 as"
+                    d="M44.87,5.89,40.59,1.6a.91.91,0,0,0-1.29,0l-.1.12L34.7,8.06a.9.9,0,0,0,.1,1.17l.35.36L20.43,24.32,22.15,26,36.89,11.31l.35.36a.91.91,0,0,0,1.17.1l6.35-4.49A.92.92,0,0,0,45,6a.52.52,0,0,0-.1-.11ZM38,9.84,36.64,8.49l3.42-4.83,2.76,2.75Z"
+                    transform="translate(0 0)"
+                  />
+                </svg>
+
+                <span>SETTINGS</span>
+              </a>
+            </li>
+          </ul>
+
+          <!-- Tab panes -->
+          <div class="tab-content">
+            <!-----------------------------FIRST-TAB----------------------------------->
+            <div id="home" class="container tab-pane active">
+              <div class="row">
+                <div class="col-md-8 page_url mr-1">
+                  <span>Page URL:</span>
+                  <img
+                    src="/images/Settings.svg"
+                    alt="path_109"
+                    width="5%"
+                    class="page_url_image"
+                  />
+                  <div class="page_url_form">
+                    <form action="#">
+                      <input
+                        type="text"
+                        name="search"
+                        class="form-control src-form"
+                        value="/open?tempPath=<%= step.pathLanding %>"
+                        placeholder="url.com"
+                      />
+                      <a
+                        href="/open?tempPath=<%= step.pathLanding %>"
+                        target="_blank"
+                        class="page_url_button"
+                        style="
+                          text-decoration: none !important;
+                          padding-bottom: 7px;
+                        "
+                        ><span>OPEN</span>
+                        <!-- <img src="/images/open.svg" alt="group_46" width="35%" > -->
+                        <i
+                          class="fas fa-arrow-right"
+                          style="
+                            transform: rotate(334deg) !important;
+                            color: #fff;
+                          "
+                        ></i>
+                      </a>
+                    </form>
+                  </div>
+                </div>
+                <div class="col-md-4 page_url_form_right">
+                  <span>Page Views (7 days)</span>
+                  <img src="/images/Path 109.png" alt="path_109" width="10%" />
+                  <h3><%= step.views %></h3>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-8 page_url_page_layout mr-1">
+                  <span><%= step.stepName.split('_').length > 2 ? step.stepName.split('_').slice(0,-1).join('_') :  step.stepName.split('_').join('_') %></span>
+                  <div class="pge_layout_img">
+                    <img
+                      src="<%= step.thumbnail %>"
+                      alt="group_17"
+                      class="center"
+                    />
+                  </div>
+                  <div class="page_layout_buttons">
+                    <a
+                      href="/editor?page=<%= step._id %>"
+                      class="page_layout_button_2 test"
+                      style="text-decoration: none;"
+                      ><span>EDIT PAGE</span></a
+                    >
+                    <a
+                      href="/open?tempPath=<%= step.pathLanding %>"
+                      target="_blank"
+                      class="page_layout_button_2 test"
+                      style="text-decoration: none;"
+                      ><span>OPEN PAGE</span></a
+                    >
+                      <!-- href="/open-user-temp?tempPath=<%= step.pathFolder %>/<%= step.pathLanding %>&fd=<%= funnel._id %>" -->
+                    <a
+                      onclick="deleteStep(event)"
+                      id="<%= step._id %>"
+                      class="page_layout_button_2 test"
+                      style="text-decoration: none; cursor: pointer;"
+                      ><span>DELETE PAGE</span></a
+                    >
+                    <% if(step.type === 'Sales-page') { %>
+                    <a
+                      
+                      href="/get-products/<%= funnel._id %>/<%= step._id %>"
+                      class="page_layout_button_2 test"
+                      style="text-decoration: none; cursor: pointer;"
+                      ><span>Add Products</span></a
+                    >
+                    <% } %>
+
+                  </div>
+                </div>
+                <div class="col-md-4 page_url_page_layout_right">
+                  <span>Recent Leads</span>
+                  <div class="recent_leads_contant">
+                    <% if(step.leadsgenerated !== 0) {%> <% for(let i=1; i<=5;
+                    i++){ %>
+                    <div class="recent_leads_contant_profile">
+                      <h4 id="circle">M</h4>
+                      <div class="recent_leads_contant_profile_1">
+                        <p class="recent_leads_contant_name">Maya Jones</p>
+                        <p class="recent_leads_contant_email">Maya@gmail.com</p>
+                        <p class="recent_leads_contant_address">555.123.4567</p>
+                      </div>
+                    </div>
+                    <% } %> <% } %> <% if(step.leadsgenerated === 0) {%>
+                    <p>No leads found...</p>
+                    <% } %>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--------------------------END-FIRST-TAB---------------------------------------->
+            <!--------------------------SECOND-TAB------------------------------------>
+            <div id="menu1" class="container tab-pane fade">
+              <br />
+              <div class="graph_funel">
+                <div class="container pt-3">
+                  <form>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <span class="opt_page_select test"
+                          >Opt-in page stats:</span
+                        >
+
+                        <select
+                          class="minimal"
+                          style="width: 40%; font-size: 11px;"
+                        >
+                          <option value="1">Select page</option>
+                          <option value="2">Select page</option>
+                          <option value="3">Select page</option>
+                          <option value="4">Select page</option>
+                          <option value="5">Select page</option>
+                        </select>
+                      </div>
+                      <div class="col-md-6 text-right">
+                        <div class="div-align">
+                          <form>
+                            <label>Date Range:</label>
+                            <input
+                              type="text"
+                              id="calendar"
+                              value=""
+                              placeholder="Last 7 days"
+                            />
+                          </form>
+                          <!-- <select class="form-control-sm" style="font-size: 8px; padding: 0px 8px 0px 8px; border-radius: 5px;">
+                                                        <option>Last 7 Days</option>
+                                                        <option>2</option>
+                                                        <option>3</option>
+                                                        <option>4</option>
+                                                        <option>5</option>
+                                                    </select> -->
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <hr style="width: 95%;" />
+                <div class="container mt-4">
+                  <div class="row">
+                    <div class="col-md-4 text-center">
+                      <h6 class="graph_views">Uniuqe Views</h6>
+                      <div class="bg-color" style="background-color: #1da2f4;">
+                        <h6><%= funnel.views %></h6>
+                      </div>
+                    </div>
+                    <div class="col-md-4 text-center">
+                      <h6 class="graph_views">Opt-In's</h6>
+                      <div class="bg-color" style="background-color: #0fedb2;">
+                        <h6><%= funnel.leadsgenerated %></h6>
+                      </div>
+                    </div>
+                    <div class="col-md-4 text-center">
+                      <h6 class="graph_views">opt-In range</h6>
+                      <div class="bg-color" style="background-color: #00a206;">
+                        <h6>
+                          <!-- <%= funnel.leadsgenerated === 0 && funnel.views === 0
+                          ? 0 : (funnel.leadsgenerated / funnel.views) * 100 %> -->
+                        </h6>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <hr style="width: 95%; margin-top: 10%;" />
+                <div class="container mt-4">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <h6 class="graph_views">Over time:</h6>
+                    </div>
+                    <div class="col-md-12">
+                      <a href="#" class="google_key"
+                        ><u>Add Google Analytics Key Here</u></a
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <div class="line-chart">
+                  <div class="aspect-ratio">
+                    <canvas
+                      id="chart"
+                      style="
+                        height: 347px !important;
+                        width: 763px !important;
+                        padding: 31px 17px 65px 29px;
+                      "
+                    ></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!---------------------------END-SECOND-TAB--------------------------------->
+            <!--------------------------------THIRD-TAB-------------------------------->
+            <div id="menu2" class="container tab-pane fade">
+              <br />
+              <div class="funnel_contacts">
+                <div class="row">
+                  <div class="col-sm-5 funnel_content_title">
+                    <span>Lead Capture for Real Estate Contacts:</span>
+                    <p>These contacts are speciﬁc to this funnel.</p>
+                    <div class="search_form_funnel_contacts">
+                      <form action="#">
+                        <span class="form-control-feedback"
+                          ><img
+                            src="/images/search.svg"
+                            id="search_img"
+                            alt="search"
+                        /></span>
+
+                        <input
+                          type="text"
+                          name="search"
+                          class="form-control"
+                          placeholder="Search"
+                        />
+                      </form>
+                    </div>
+                  </div>
+                  <div class="col-sm-7 funnel_contacts_date">
+                    <label>Date range:</label>
+                    <input
+                      placeholder="Date"
+                      class="textbox-n"
+                      type="text"
+                      onfocus="(this.type='date')"
+                      id="date"
+                    />
+                    <label>to:</label>
+                    <input
+                      placeholder="Date"
+                      class="textbox-n"
+                      type="text"
+                      onfocus="(this.type='date')"
+                      id="date_1"
+                    />
+                    <div class="funnel_contacts_export">
+                      <span>Export to:</span>
+                      <div class="custom-selectbox_contacts">
+                        <select class="button_1_contacts">
+                          <option value="csv">CSV</option>
+                          <option value="pdf">pdf</option>
+                        </select>
+                      </div>
+                      <!--custom-selectbox--------->
+                    </div>
+                    <!-----filter_1-->
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="card-body_new">
+                    <div class="table-responsive">
+                      <table class="table table-borderless custom_table_new">
+                        <thead class="thead_border">
+                          <tr>
+                            <th>
+                              <div class="btn-group">
+                                <button
+                                  type="button"
+                                  class="btn dropdown-toggle font-weight-bold custom_table"
+                                  data-toggle="dropdown"
+                                >
+                                  Contact Name
+                                </button>
+                              </div>
+                            </th>
+                            <th>
+                              <div class="btn-group">
+                                <button
+                                  type="button"
+                                  class="btn font-weight-bold custom_table"
+                                  style="padding-left: 70px !important;"
+                                >
+                                  Email
+                                </button>
+                              </div>
+                            </th>
+                            <th>
+                              <div class="btn-group">
+                                <button
+                                  type="button"
+                                  class="btn font-weight-bold custom_table"
+                                >
+                                  Phone
+                                </button>
+                              </div>
+                            </th>
+                            <th>
+                              <div class="btn-group">
+                                <button
+                                  type="button"
+                                  class="btn dropdown-toggle font-weight-bold custom_table"
+                                  data-toggle="dropdown"
+                                >
+                                  Source
+                                </button>
+                              </div>
+                            </th>
+                            <th>
+                              <div class="btn-group">
+                                <button
+                                  type="button"
+                                  class="btn dropdown-toggle font-weight-bold custom_table"
+                                  data-toggle="dropdown"
+                                >
+                                  Opt-in Date
+                                </button>
+                              </div>
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <% for(let i=1; i<=9; i++){ %>
+                          <tr>
+                            <td class="post_content_table">
+                              <span>Joe Dickinson</span>
+                            </td>
+                            <td class="post_email">Joe@Mobilemindagency.com</td>
+                            <td class="post_phone">N/A</td>
+                            <td class="post_source">Ebook Opt-in</td>
+                            <td class="post_date_new">July 15, 2019</td>
+                          </tr>
+                          <% } %>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-----------------------------------END-THIRD-TAB------------------------------------------>
+            <!--------------------------------------------FOURTH-TAB------------------------------------------------------>
+            <div id="menu3" class="container tab-pane fade">
+              <br />
+              <div class="funnel_settings">
+                <span>Lead Capture for Real Estate Settings: </span>
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-6  mt-2">
+
+                      <div class="tab-content integrations-tab">
+                        <% for(let i=0; i<= payments.length -1; i++){ %>
+                        
+                          <div class="tab-pane  <%= i=== 0 ? 'active' : '' %>" id="integrationMenu<%= i+1 %>">
+                            
+                            <div class="d-flex justify-content-center mb-3">
+                              <img src="<%= payments[i].image %>" height="100" class="border rounded shadow">
+                            </div>
+                            <!-- <h6><span class="font-weight-bolder">Nickname:</span> <%= payments[i].nickname %></h6> -->
+                            <div class="row p-1">
+                              <div class="col-12 p-0 font-weight-bolder">Nickname</div>
+                              <div class="col-12 p-0" style="overflow: hidden;"><%= payments[i].nickname %></div>
+                            </div>
+
+                            <div class="row p-1">
+                              <div class="col-12 p-0 font-weight-bolder">Api</div>
+                              <div class="col-12 p-0" style="overflow: hidden;"><%= payments[i].api %></div>
+                            </div>
+
+
+
+                          </div>
+                        <% } %>
+                      </div>
+                      <div class="search_form_settings">
+                        <form action="#">
+                          <label>Funnel Name </label>
+                          <input
+                            type="text"
+                            name="search"
+                            class="form-control"
+                            placeholder="Lead Capture for Real Estate"
+                            ,
+                            value="<%= funnel.funnelname %>"
+                          />
+                          <span class="form-control-feedback_new"
+                            ><a
+                              href="#"
+                              style="text-decoration: none !important;"
+                              ><u>Change</u></a
+                            ></span
+                          >
+                          <label>Domain</label>
+                          <input
+                            type="text"
+                            name="search"
+                            class="form-control"
+                            placeholder="RealEstateInTown.com"
+                          />
+                          <span class="form-control-feedback_new"
+                            ><a href="#"
+                              ><u>Change/Customize Domain</u></a
+                            ></span
+                          >
+                        </form>
+                      </div>
+                    </div>
+                    <div class="col-md-6 funnel_settings_right mt-3">
+                      <div class="">
+                        <a style="position: absolute; cursor: pointer; left: 10px" class=" integration-back-button" >
+                          <i class="fa fa-angle-left"></i>
+                          Back
+                        </a>
+                        <span class="">Integrations </span>
+                      </div>
+                      
+                      
+                      <ul class="mt-3 nav nav-pills  list-inline" >
+                        
+
+                        <% if (payments.length > 0) { %>
+
+                          <select  class="payments custom-select" funnel="<%= funnel._id %>">
+                            <option selected disabled value="">Select Payments</option>
+
+                          <% for(let i=0; i<= payments.length -1; i++){ %>
+
+                              <option value="<%= payments[i]._id %>">
+                                <%= payments[i].vendor %> (<%= payments[i].nickname %>)
+                              </option>
+                            
+                              <% } %>
+
+                          </select>
+
+                          <button class="mt-2 btn btn-sm btn-primary" id="add-payment" >Add</button>
+                          <button class="mt-2 btn btn-sm btn-danger" funnel="<%= funnel._id %>" id="remove-payment" >Remove</button>
+
+                        <% } else { %>
+                            <div class="font-weight-bolder w-100 small text-center">You Don't have any Payment Integartion</div>
+                            <div class="w-100 small text-center">
+                              <a href="/integration/payment">click to Integrate</a>
+                            </div>
+                            
+                            
+                        <% } %>
+                        
+                    </ul>
+                      
+                      <label class="mt-3">More Integrations Coming Soon</label>
+
+                      <div class="row mt-3">
+                        <div class="col-xl-4 cen">
+                          <a href="#" class="box_a">
+                            <div class="box_1">
+                              <img
+                                src="/images/mailchimp.svg"
+                                alt="group_87"
+                                width="40px"
+                              />
+                              <p>COMING SOON</p>
+                            </div>
+                          </a>
+                          <label>Mail Chimp</label>
+                        </div>
+                        <div class="col-xl-4 cen">
+                          <a href="#" class="box_a">
+                            <div class="box_1">
+                              <img
+                                src="/images/paypal.svg"
+                                alt="group_107"
+                                width="40px"
+                              />
+                              <p>COMING SOON</p>
+                            </div>
+                          </a>
+                          <label>PayPal</label>
+                        </div>
+                        <div class="col-xl-4 cen">
+                          <a href="#" class="box_a">
+                            <div class="box_1">
+                              <img
+                                src="/images/analytics.svg"
+                                alt="group_106"
+                                width="45px"
+                              />
+                              <p>COMING SOON</p>
+                            </div>
+                          </a>
+                          <label>Analytics </label>
+                        </div>
+                      </div>
+
+                      <div class="row mt-3">
+                        <div class="col-xl-4 cen">
+                          <a href="#" class="box_a">
+                            <div class="box_1">
+                              <img
+                                src="/images/adsencs.svg"
+                                alt="group_89"
+                                width="45px"
+                              />
+                              <p>COMING SOON</p>
+                            </div>
+                          </a>
+                          <label>AdSense</label>
+                        </div>
+                        
+                        <div class="col-xl-4 cen">
+                          <a href="#" class="box_a">
+                            <div class="box_1">
+                              <img
+                                src="/images/square.svg"
+                                alt="group_108"
+                                width="45px"
+                              />
+                              <p>COMING SOON</p>
+                            </div>
+                          </a>
+                          <label>Square</label>
+                        </div>
+                      </div>
+                      <a href="#" class="zapier_btn"
+                        ><button
+                          class="z-style btn center-btn"
+                          style="margin-top: 15px;"
+                        >
+                          <img
+                            src="/images/Add Element.svg"
+                            style="margin-bottom: 1.5%; padding-right: 5px;"
+                            width="37px"
+                          />ADD NEW INTEGRAION
+                        </button></a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--------------------------------------------END-FOURTH-TAB-------------------------------------------------->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-------------------FOOTER-------------------->
+<div class="row">
+  <div class="col-md-12 msg_box">
+    <div class="img_box">
+      <img src="/images/Group_63.png" alt="Generic placeholder image" />
+      <span>Need help?</span>
+      <p>Chat with live support.</p>
+    </div>
+  </div>
+</div>
+
+<!------------------END-FOOTER----------------->
+<!----------------SCRIPTS------------------>
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+<script src="/js/swal.js"></script>
+<script>
+  function deleteStep(e) {
+    e.preventDefault()
+    confirmation(
+      "Are you sure?",
+      "You won't be able to revert this!",
+      "Yes, delete it!"
+    )
+    .then((result) => {
+      
+      if (result.isConfirmed) {
+
+        const stepId = e.target.parentElement.getAttribute('id');
+        e.target.innerText = 'Wait ...'
+        $.ajax({
+                type: "GET",
+                url: `/delete-step/<%- funnel._id %>/${stepId}`,
+                success: function (data) {
+                  console.log(data)
+                  window.location =
+              `/funnel_home/<%- funnel._id %>?stepid=${data.stepId}`;
+                  
+                },
+                error: function (data) {
+                  console.log(data)
+                  e.target.innerText = 'DELETE PAGE'
+
+                  Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: "Can't delete step if only One step Exist",
+                  })
+                }
+            });
+
+
+     
+      }
+      
+    })
+    .catch(err => {
+      window.location.reload();
+    })
+
+  }
+
+  function myFunction() {
+    document.getElementById('myFilter').style.opacity = '27%';
+  }
+</script>
+<script>
+  function myFunctionNew() {
+    document.getElementById('myFilter').style.opacity = '1';
+  }
+</script>
+<script>
+  var chart = document.getElementById('chart').getContext('2d'),
+    gradient = chart.createLinearGradient(0, 0, 0, 450);
+  Chart.defaults.global.defaultFontSize = 12;
+  gradient.addColorStop(0.3, 'rgba(15,237,178,0.5)');
+  gradient.addColorStop(0.5, 'rgba(15,237,178,0.5)');
+  gradient.addColorStop(1, 'rgba(29,162,244,0.0)');
+
+  var data = {
+    labels: ['M', 'T', 'W', 'Th', 'F', 'S', 'Su'],
+    datasets: [
+      {
+        label: 'Opt-ins',
+        backgroundColor: gradient,
+        pointBackgroundColor: '#0FEDB2',
+        borderWidth: 2,
+        borderColor: '#0FEDB2',
+        data: [250, 500, 150, 265, 250, 0, 200],
+      },
+      {
+        label: 'Views',
+        backgroundColor: 'rgba(29,162,244,0.7)',
+        pointBackgroundColor: '#1DA2F4',
+        borderWidth: 0.01,
+        borderColor: '#1DA2F4',
+        data: [400, 500, 300, 425, 300, 150, 550],
+      },
+    ],
+  };
+
+  var options = {
+    maintainAspectRatio: false,
+    responsive: true,
+    maintainAspectRatio: true,
+    animation: {
+      easing: 'easeInOutQuad',
+      duration: 520,
+    },
+
+    scales: {
+      xAxes: [
+        {
+          gridLines: {
+            color: 'rgba(70, 70, 70, 0.5)',
+            lineWidth: 1,
+          },
+        },
+      ],
+      yAxes: [
+        {
+          gridLines: {
+            color: 'rgba(70, 70, 70, 0.5)',
+            lineWidth: 1,
+          },
+        },
+      ],
+    },
+    elements: {
+      line: {
+        tension: 0,
+      },
+      point: {
+        radius: 0,
+      },
+    },
+    legend: {
+      horizontalAlign: 'left',
+      display: true,
+      reverse: true,
+      labels: {
+        padding: 20,
+        align: 'start',
+        boxWidth: 80,
+        fontColor: '#000',
+      },
+    },
+
+    point: {
+      backgroundColor: '#1DA2F4',
+    },
+    tooltips: {
+      intersection: false,
+      shadowColor: '#707070',
+      enabled: true,
+      titleFontFamily: 'Open Sans',
+      backgroundColor: 'white',
+      titleFontColor: '#707070',
+      bodyFontColor: '#707070',
+      caretSize: 0,
+      cornerRadius: 10,
+      xPadding: 40,
+      yPadding: 10,
+      mode: 'index',
+    },
+  };
+
+  var chartInstance = new Chart(chart, {
+    type: 'line',
+    data: data,
+    options: options,
+  });
+</script>
+<script>
+  $(document).ready(function () {
+    $('#calendar').datepicker({
+      minDate: -6,
+      maxDate: 0,
+    });
+
+    var urlParams = new URLSearchParams(window.location.search);
+
+     $('.sidebar_buttons a').filter(index => {
+      if ($('.sidebar_buttons a')[index].getAttribute('id') === urlParams.get('stepid')) {
+        $('.sidebar_buttons a')[index].classList.add('active')
+      }
+    })
+
+
+  });
+</script>
+<!------------------END-SCRIPT---------------------->
+
+<script>
+  jQuery(() => {
+
+    let backButton = $('.integration-back-button');
+    let integrationTabs = $('.integrations-tab');
+    let funnelDetails = $('.search_form_settings');
+    let addPayment = $('#add-payment');
+    let removePayment = $('#remove-payment');
+    let selected = $('.payments')
+
+    backButton.hide();
+    removePayment.hide();
+    integrationTabs.hide();
+
+    addPayment.on('click', function (e) {
+      let funnel = selected.attr('funnel');
+      let payment = selected.val();
+
+      if(!payment) {
+        return alert('please select a payment');
+      }
+
+
+      Controller.addPaymentIntegration({
+        funnel: funnel,
+        payment:payment
+      })
+      .then((result) => {
+        console.log(result)
+        success('Success','Payment Meathod Added Successfully!')
+          .then(() => {
+            window.location.reload();
+          })
+          .catch(err => {
+            console.log(err);
+          })
+      })
+      .catch(err => {
+        console.log(err)
+        oops('Error in Adding Payment Methoad')
+      })
+    })
+
+ 
+    var pageId = "<%= funnel.steps[0]._id %>";
+
+    Controller.getPageIntegartions({
+        pageId: pageId,
+        type: 'Payment'
+    })
+    .then((data) => {
+
+      if (data.integration) {
+        addPayment.hide();
+        removePayment.show();
+        removePayment.attr('payment', data.details._id);
+        selected.val(data.details._id)
+      }
+    })
+    .catch(err => {
+        console.log(err)
+        oops('Something Went Wrong in Get Page Integrations')
+    })
+
+
+
+    removePayment.on('click', function(e) {
+      e.preventDefault()
+
+      let funnelId = ($(this).attr('funnel'));
+      let paymentId = ($(this).attr('payment'));
+
+      confirmation('Remove Payment Integration?', 'are you want to remove this payment Integartion?', 'Ok')
+        .then((result) => {
+            if (result.value) {
+              Controller.removePaymentIntegration({
+                funnel: funnelId,
+                payment:paymentId
+              })
+              .then((result) => {
+                console.log(result)
+                window.location.reload()
+              })
+              .catch(err => {
+                console.log(err)
+              })
+            }
+        })
+        .catch(err => {
+          console.log(err)
+        })
+     
+
+    })
+
+
+  })
+</script>

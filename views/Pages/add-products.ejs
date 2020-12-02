@@ -1,0 +1,317 @@
+<%- include('../Partials/header.ejs') %>
+<div class="container" style="padding-right: 0px !important; padding-left: 0 !important;">
+  <div class="row">
+    <div class="col-md-12 filter_content_1">
+      <span>Add Products</span>
+      <div class="bottom_left">
+        <a href="/funnel_home/<%= funnel %>?stepid=<%= step %>"><u><i class="fa fa-angle-left"></i>Back to
+            funnels</u></a>
+      </div>
+      <div class="border shadow rounded  pb-4 row mt-3">
+        <div class="col-12 mt-3">
+          <span class=""><i class='fas p-2 text-center  bg-shade rounded-circle small mr-2 ' style="font-size: 12px; width: 30px;">&#xf155;</i><span class="mt-2 ">Payment Options</span></span>
+          <span class="ml-2"><i class='fas p-2 bg-shade rounded-circle small mr-2 fa fa-gear' style="font-size: 12px; "></i><span class="mt-2 font-weight-bolder">Product Details</span></span>
+
+        </div>
+        <form id="add-product" class="w-100 mt-4 mb-5">
+          <div class="row w-100 ">
+            <div class="col-sm-6">
+
+              <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="product_name" placeholder="Product Name" required>
+              </div>
+
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+
+              <div class="form-group">
+                <label for="price">Price:</label>
+                <input type="text" class="form-control" id="product_price" placeholder="Product Price" pattern="[1-9]{1}[0-9]*$" required>
+              </div>
+
+            </div>
+            <div class="col-md-6">
+
+              <label for="currency">Currency:</label>
+
+              <select name="currency" id="currency" class="custom-select">
+                <option class="item" value="AED">AED</option>
+                <option class="item" value="AFN">AFN</option>
+                <option class="item" value="ALL">ALL</option>
+                <option class="item" value="AMD">AMD</option>
+                <option class="item" value="ANG">ANG</option>
+                <option class="item" value="AOA">AOA</option>
+                <option class="item" value="ARS">ARS</option>
+                <option class="item" value="AUD">AUD</option>
+                <option class="item" value="AWG">AWG</option>
+                <option class="item" value="AZN">AZN</option>
+                <option class="item" value="BAM">BAM</option>
+                <option class="item" value="BBD">BBD</option>
+                <option class="item" value="BDT">BDT</option>
+                <option class="item" value="BGN">BGN</option>
+                <option class="item" value="BIF">BIF</option>
+                <option class="item" value="BMD">BMD</option>
+                <option class="item" value="BND">BND</option>
+                <option class="item" value="BOB">BOB</option>
+                <option class="item" value="BRL">BRL</option>
+                <option class="item" value="BSD">BSD</option>
+                <option class="item" value="BWP">BWP</option>
+                <option class="item" value="BZD">BZD</option>
+                <option class="item" value="CAD">CAD</option>
+                <option class="item" value="CDF">CDF</option>
+                <option class="item" value="CHF">CHF</option>
+                <option class="item" value="CLP">CLP</option>
+                <option class="item" value="CNY">CNY</option>
+                <option class="item" value="COP">COP</option>
+                <option class="item" value="CRC">CRC</option>
+                <option class="item" value="CVE">CVE</option>
+                <option class="item" value="CZK">CZK</option>
+                <option class="item" value="DJF">DJF</option>
+                <option class="item" value="DKK">DKK</option>
+                <option class="item" value="DOP">DOP</option>
+                <option class="item" value="DZD">DZD</option>
+                <option class="item" value="EEK">EEK</option>
+                <option class="item" value="EGP">EGP</option>
+                <option class="item" value="ETB">ETB</option>
+                <option class="item" value="EUR">EUR</option>
+                <option class="item" value="FJD">FJD</option>
+                <option class="item" value="FKP">FKP</option>
+                <option class="item" value="GBP">GBP</option>
+                <option class="item" value="GEL">GEL</option>
+                <option class="item" value="GIP">GIP</option>
+                <option class="item" value="GMD">GMD</option>
+                <option class="item" value="GNF">GNF</option>
+                <option class="item" value="GTQ">GTQ</option>
+                <option class="item" value="GYD">GYD</option>
+                <option class="item" value="HKD">HKD</option>
+                <option class="item" value="HNL">HNL</option>
+                <option class="item" value="HRK">HRK</option>
+                <option class="item" value="HTG">HTG</option>
+                <option class="item" value="HUF">HUF</option>
+                <option class="item" value="IDR">IDR</option>
+                <option class="item" value="ILS">ILS</option>
+                <option class="item" value="INR">INR</option>
+                <option class="item" value="ISK">ISK</option>
+                <option class="item" value="JMD">JMD</option>
+                <option class="item" value="JPY">JPY</option>
+                <option class="item" value="KES">KES</option>
+                <option class="item" value="KGS">KGS</option>
+                <option class="item" value="KHR">KHR</option>
+                <option class="item" value="KMF">KMF</option>
+                <option class="item" value="KRW">KRW</option>
+                <option class="item" value="KYD">KYD</option>
+                <option class="item" value="KZT">KZT</option>
+                <option class="item" value="LAK">LAK</option>
+                <option class="item" value="LBP">LBP</option>
+                <option class="item" value="LKR">LKR</option>
+                <option class="item" value="LRD">LRD</option>
+                <option class="item" value="LSL">LSL</option>
+                <option class="item" value="LTL">LTL</option>
+                <option class="item" value="LVL">LVL</option>
+                <option class="item" value="MAD">MAD</option>
+                <option class="item" value="MDL">MDL</option>
+                <option class="item" value="MGA">MGA</option>
+                <option class="item" value="MKD">MKD</option>
+                <option class="item" value="MNT">MNT</option>
+                <option class="item" value="MOP">MOP</option>
+                <option class="item" value="MRO">MRO</option>
+                <option class="item" value="MUR">MUR</option>
+                <option class="item" value="MVR">MVR</option>
+                <option class="item" value="MWK">MWK</option>
+                <option class="item" value="MXN">MXN</option>
+                <option class="item" value="MYR">MYR</option>
+                <option class="item" value="MZN">MZN</option>
+                <option class="item" value="NAD">NAD</option>
+                <option class="item" value="NGN">NGN</option>
+                <option class="item" value="NIO">NIO</option>
+                <option class="item" value="NOK">NOK</option>
+                <option class="item" value="NPR">NPR</option>
+                <option class="item" value="NZD">NZD</option>
+                <option class="item" value="PAB">PAB</option>
+                <option class="item" value="PEN">PEN</option>
+                <option class="item" value="PGK">PGK</option>
+                <option class="item" value="PHP">PHP</option>
+                <option class="item" value="PKR">PKR</option>
+                <option class="item" value="PLN">PLN</option>
+                <option class="item" value="PYG">PYG</option>
+                <option class="item" value="QAR">QAR</option>
+                <option class="item" value="RON">RON</option>
+                <option class="item" value="RSD">RSD</option>
+                <option class="item" value="RUB">RUB</option>
+                <option class="item" value="RWF">RWF</option>
+                <option class="item" value="SAR">SAR</option>
+                <option class="item" value="SBD">SBD</option>
+                <option class="item" value="SCR">SCR</option>
+                <option class="item" value="SEK">SEK</option>
+                <option class="item" value="SGD">SGD</option>
+                <option class="item" value="SHP">SHP</option>
+                <option class="item" value="SLL">SLL</option>
+                <option class="item" value="SOS">SOS</option>
+                <option class="item" value="SRD">SRD</option>
+                <option class="item" value="STD">STD</option>
+                <option class="item" value="SVC">SVC</option>
+                <option class="item" value="SZL">SZL</option>
+                <option class="item" value="THB">THB</option>
+                <option class="item" value="TJS">TJS</option>
+                <option class="item" value="TOP">TOP</option>
+                <option class="item" value="TRY">TRY</option>
+                <option class="item" value="TTD">TTD</option>
+                <option class="item" value="TWD">TWD</option>
+                <option class="item" value="TZS">TZS</option>
+                <option class="item" value="UAH">UAH</option>
+                <option class="item" value="UGX">UGX</option>
+                <option class="item active " selected value="USD">USD</option>
+                <option class="item" value="UYU">UYU</option>
+                <option class="item" value="UZS">UZS</option>
+                <option class="item" value="VND">VND</option>
+                <option class="item" value="VUV">VUV</option>
+                <option class="item" value="WST">WST</option>
+                <option class="item" value="XAF">XAF</option>
+                <option class="item" value="XCD">XCD</option>
+                <option class="item" value="XOF">XOF</option>
+                <option class="item" value="XPF">XPF</option>
+                <option class="item" value="YER">YER</option>
+                <option class="item" value="ZAR">ZAR</option>
+                <option class="item" value="ZMW">ZMW</option>
+              </select>
+
+            </div>
+            <hr>
+            <div class="col-md-6 mt-2">
+              <h4>Shipping Origin</h4>
+
+              <div class="form-group">
+                <label for="phone">Phone:</label>
+                <input type="text" class="form-control" id="phone" placeholder="Phone" pattern="^\d{10}$" title="Please Enter Correct Phone " required> 
+              </div>
+
+              <div class="form-group">
+                <label for="address1">Address1:</label>
+                <input type="text" class="form-control" id="address1" placeholder="Address 1" required>
+              </div>
+
+              <div class="form-group">
+                <label for="address2">Address2:</label>
+                <input type="text" class="form-control" id="address2" placeholder="Address 2">
+              </div>
+
+
+              <div class="form-group">
+                <label for="city-town">City/Town:</label>
+                <input type="text" class="form-control" id="city-town" placeholder="City/Town" required>
+              </div>
+
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label for="country">Country:</label>
+                <input type="text" class="form-control" id="country" placeholder="Country" required>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label for="state">State:</label>
+                <input type="text" class="form-control" id="state" placeholder="State" required>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              
+              <div class="form-group">
+                <label for="zip">Zip Code:</label>
+                <input type="text" class="form-control" id="zip" placeholder="Zip Code" required>
+              </div>
+
+
+              <div class="form-group">
+                <label for="description">Product Description:</label>
+                <textarea class="form-control" id="description" rows="5" placeholder="Product Description" required></textarea>
+              </div> 
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 text-right">
+              <button type="submit" class="btn bg-shade text-white">Save</button>
+              <button type="button" class="btn btn-danger">Cancel</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  
+  <!------------------END-FOOTER----------------->
+  <!----------------SCRIPTS------------------>
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+  <script src="/js/swal.js"></script>
+
+  <script>
+    jQuery(() => {
+      let data = localStorage.getItem('payment-options');
+      if(!data) {
+        window.location.href= '/add-products/<%= funnel %>/<%= step %>/payment-options'
+      }
+      data = JSON.parse(data)
+
+      localStorage.removeItem('payment-options')
+      console.log(data)
+
+
+      $('#add-product').on('submit', function(e) {
+        e.preventDefault();
+
+        let productName = $('#product_name');
+        let productPrice = $('#product_price');
+        let currency = $('#currency');;
+        let phone = $('#phone')
+        let address1 = $('#address1');
+        let address2 = $('#address2');
+        let cityTown = $('#city-town');
+        let country = $('#country');
+        let state = $('#state');
+        let zip = $('#zip');
+        let description = $('#description');
+
+        data['name'] = productName.val();
+        data['price'] = productPrice.val()
+        data['currency'] = currency.val();
+        data['phone'] = phone.val();
+        data['address1'] = address1.val();
+        data['address2'] = address2.val();
+        data['cityTown'] = cityTown.val();
+        data['state'] = state.val();
+        data['zip']= zip.val();
+        data['country'] = country.val();
+        data['description'] = description.val(); 
+        data['funnel'] = "<%= funnel %>";
+        data['step'] = "<%= step %>"
+
+        $.ajax({
+          type: "POST",
+          url: '/add-product',
+          data: data,
+          success: function (data) {
+            success('Product add Successfully!')
+              .then(() => {
+                window.location.href = "/get-products/<%= funnel %>/<%= step %>"
+              });
+            
+          },
+          error: function (data) {
+            console.log(data)
+          }
+      });
+      })
+
+
+
+    })
+  </script>

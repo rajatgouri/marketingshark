@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="363" height="36" viewBox="0 0 363 36">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.614" y1="0.722" x2="0" y2="0.739" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#29b5ff"/>
+      <stop offset="1" stop-color="#155b80"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_744" data-name="Group 744" transform="translate(-469 -3994)">
+    <path id="Path_554" data-name="Path 554" d="M0,0H42L33.15,13.587,42,28H0Z" transform="translate(790 4002)" fill="url(#linear-gradient)"/>
+    <path id="Path_555" data-name="Path 555" d="M0,0H42L33.15,13.587,42,28H0Z" transform="translate(511 4030) rotate(180)" fill="url(#linear-gradient)"/>
+    <rect id="Rectangle_1213" data-name="Rectangle 1213" width="313" height="28" transform="translate(494 3994)" fill="#29b5ff"/>
+    <text id="Single_1_Page_Personal_Branding_Website" data-name="Single 1 Page Personal Branding Website" transform="translate(650 4014)" fill="#fff" font-size="16" font-family="Roboto-Bold, Roboto" font-weight="700"><tspan x="-148.746" y="0">Single 1 Page Personal Branding Website</tspan></text>
+  </g>
+</svg>

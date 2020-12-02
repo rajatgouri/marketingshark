@@ -1,0 +1,6 @@
+<svg id="Group_52" data-name="Group 52" xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16">
+  <path id="Path_22" data-name="Path 22" d="M5,19a5,5,0,1,1,5-5A5.005,5.005,0,0,1,5,19ZM5,9.667A4.333,4.333,0,1,0,9.333,14,4.338,4.338,0,0,0,5,9.667Z" transform="translate(0 -3)" fill="#fff"/>
+  <path id="Path_23" data-name="Path 23" d="M9,8.073a.333.333,0,0,1-.333-.333V3.667a3,3,0,0,0-6,0V7.74A.333.333,0,0,1,2,7.74V3.667a3.667,3.667,0,1,1,7.333,0V7.74A.333.333,0,0,1,9,8.073Z" transform="translate(-0.667)" fill="#fff"/>
+  <path id="Path_24" data-name="Path 24" d="M7.333,18A.333.333,0,0,1,7,17.667V16.333a.333.333,0,1,1,.667,0v1.333A.333.333,0,0,1,7.333,18Z" transform="translate(-2.333 -5.333)" fill="#fff"/>
+  <circle id="Ellipse_3" data-name="Ellipse 3" cx="1" cy="1" r="1" transform="translate(4 9)" fill="#fff"/>
+</svg>

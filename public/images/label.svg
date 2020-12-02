@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="75.001" height="41.5" viewBox="0 0 75.001 41.5">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.911" y1="0.866" x2="0.924" y2="0.722" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#707070"/>
+      <stop offset="1" stop-color="#383838"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#1da2f4"/>
+      <stop offset="1" stop-color="#0fedb2"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_736" data-name="Group 736" transform="translate(-298 -331)">
+    <path id="Path_496" data-name="Path 496" d="M0,0,13,11.588V41.5L0,29.912Z" transform="translate(298 331)" fill="url(#linear-gradient)"/>
+    <path id="Union_1" data-name="Union 1" d="M-1670,226V211h62.743L-1595,226Zm0-15V196h75l-12.258,15Z" transform="translate(1968 135)" fill="url(#linear-gradient-2)"/>
+    <text id="POPULAR_" data-name="POPULAR!" transform="translate(328 349)" fill="#fff" font-size="9" font-family="OpenSans-Bold, Open Sans" font-weight="700"><tspan x="-22.54" y="0">POPULAR!</tspan></text>
+  </g>
+</svg>

@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="149.463" height="149.364" viewBox="0 0 149.463 149.364">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.267" y1="0.668" x2="0.328" y2="0.668" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff" stop-opacity="0.102"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="clip-path">
+      <path id="Path_211" data-name="Path 211" d="M285.283,0H258.26a12.036,12.036,0,0,0-11.988,11.988V47.168H206.965A11.827,11.827,0,0,0,195.173,58.96V98.266H159.7a11.827,11.827,0,0,0-11.792,11.792v27.514A11.827,11.827,0,0,0,159.7,149.364H285.283a12.036,12.036,0,0,0,11.988-11.988V11.988A12.036,12.036,0,0,0,285.283,0Z" transform="translate(-147.907)"/>
+    </clipPath>
+    <linearGradient id="linear-gradient-3" x1="-1.058" y1="0.514" x2="-0.971" y2="0.557" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#bf360c" stop-opacity="0.2"/>
+      <stop offset="1" stop-color="#bf360c" stop-opacity="0.02"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-4" x1="0.287" y1="0.658" x2="0.327" y2="0.697" xlink:href="#linear-gradient"/>
+  </defs>
+  <g id="Group_106" data-name="Group 106" transform="translate(-147.907)" opacity="0.242">
+    <path id="Path_207" data-name="Path 207" d="M285.284,0h-27.22a12.036,12.036,0,0,0-11.988,11.988V47.168h-39.4a11.638,11.638,0,0,0-11.6,11.694v39.4H159.6a11.659,11.659,0,0,0-11.694,11.694v27.514a11.956,11.956,0,0,0,11.694,11.89h125.78a12.036,12.036,0,0,0,11.988-11.988V11.988A12.186,12.186,0,0,0,285.284,0Z" transform="translate(-0.001)" fill="url(#linear-gradient)"/>
+    <path id="Path_208" data-name="Path 208" d="M285.284,0h-27.22a12.036,12.036,0,0,0-11.988,11.988V47.168h-39.4a11.638,11.638,0,0,0-11.6,11.694v39.4H159.6a11.659,11.659,0,0,0-11.694,11.694v27.514a11.956,11.956,0,0,0,11.694,11.89h125.78a12.036,12.036,0,0,0,11.988-11.988V11.988A12.186,12.186,0,0,0,285.284,0Z" transform="translate(-0.001)" fill="url(#linear-gradient)"/>
+    <g id="Group_91" data-name="Group 91" transform="translate(147.907)">
+      <g id="Group_90" data-name="Group 90" transform="translate(0)" clip-path="url(#clip-path)">
+        <path id="Path_209" data-name="Path 209" d="M1831.985,0h-27.023a12.036,12.036,0,0,0-11.988,11.988V149.364h39.012a12.036,12.036,0,0,0,11.988-11.988V11.988A12.036,12.036,0,0,0,1831.985,0Z" transform="translate(-1694.609)" fill="#f57c00"/>
+        <path id="Path_210" data-name="Path 210" d="M195.075,800.634V839.94H159.7a11.827,11.827,0,0,0-11.792,11.792v27.514A11.827,11.827,0,0,0,159.7,891.038h86.474v-102.2H206.867A11.827,11.827,0,0,0,195.075,800.634Z" transform="translate(-147.907 -741.675)" fill="#ffc107"/>
+      </g>
+    </g>
+    <g id="Group_93" data-name="Group 93" transform="translate(147.907)">
+      <g id="Group_92" data-name="Group 92" transform="translate(0)" clip-path="url(#clip-path)">
+        <path id="Path_212" data-name="Path 212" d="M1791.329,788.842v102.2h39.012a12.036,12.036,0,0,0,11.988-11.988V839.94Z" transform="translate(-1693.064 -741.675)" fill="url(#linear-gradient-3)"/>
+      </g>
+    </g>
+    <g id="Group_96" data-name="Group 96" transform="translate(147.907)">
+      <g id="Group_95" data-name="Group 95" transform="translate(0)">
+        <g id="Group_94" data-name="Group 94" clip-path="url(#clip-path)">
+          <path id="Path_214" data-name="Path 214" d="M948.541,789.825h39.306v-.983H948.541a11.826,11.826,0,0,0-11.792,11.792v.983A11.826,11.826,0,0,1,948.541,789.825Z" transform="translate(-889.582 -741.675)" fill="#fff" opacity="0.2"/>
+        </g>
+      </g>
+    </g>
+    <g id="Group_99" data-name="Group 99" transform="translate(147.907)">
+      <g id="Group_98" data-name="Group 98" transform="translate(0)">
+        <g id="Group_97" data-name="Group 97" clip-path="url(#clip-path)">
+          <path id="Path_216" data-name="Path 216" d="M159.7,1644.4h35.376v-.982H159.7a11.826,11.826,0,0,0-11.792,11.792v.983A11.827,11.827,0,0,1,159.7,1644.4Z" transform="translate(-147.907 -1545.155)" fill="#fff" opacity="0.2"/>
+        </g>
+      </g>
+    </g>
+    <g id="Group_102" data-name="Group 102" transform="translate(147.907)">
+      <g id="Group_101" data-name="Group 101" transform="translate(0)">
+        <g id="Group_100" data-name="Group 100" clip-path="url(#clip-path)">
+          <path id="Path_218" data-name="Path 218" d="M1831.985,0h-27.023a12.036,12.036,0,0,0-11.988,11.988v.983A12.036,12.036,0,0,1,1804.961.983h27.023a12.036,12.036,0,0,1,11.988,11.988v-.983A12.036,12.036,0,0,0,1831.985,0Z" transform="translate(-1694.609)" fill="#fff" opacity="0.2"/>
+        </g>
+      </g>
+    </g>
+    <g id="Group_105" data-name="Group 105" transform="translate(147.907)">
+      <g id="Group_104" data-name="Group 104" transform="translate(0)">
+        <g id="Group_103" data-name="Group 103" clip-path="url(#clip-path)">
+          <path id="Path_220" data-name="Path 220" d="M285.283,2293.058H159.7a11.826,11.826,0,0,1-11.792-11.792v.982a11.826,11.826,0,0,0,11.792,11.792H285.184a12.036,12.036,0,0,0,11.988-11.988v-.982a11.889,11.889,0,0,1-11.89,11.988Z" transform="translate(-147.907 -2144.677)" fill="#bf360c" opacity="0.2"/>
+        </g>
+      </g>
+    </g>
+    <path id="Path_222" data-name="Path 222" d="M285.283,0H258.26a12.036,12.036,0,0,0-11.988,11.988V47.168H206.965A11.827,11.827,0,0,0,195.173,58.96V98.266H159.7a11.827,11.827,0,0,0-11.792,11.792v27.514A11.827,11.827,0,0,0,159.7,149.364H285.283a12.036,12.036,0,0,0,11.988-11.988V11.988A12.036,12.036,0,0,0,285.283,0Z" transform="translate(0)" fill="url(#linear-gradient-4)"/>
+  </g>
+</svg>

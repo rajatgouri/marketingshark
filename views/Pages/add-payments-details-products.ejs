@@ -1,0 +1,154 @@
+<%- include('../Partials/header.ejs') %>
+<div
+  class="container"
+  style="padding-right: 0px !important; padding-left: 0 !important;"
+>
+  <div class="row">
+    <div class="col-md-12 filter_content_1">
+      <span>Add Products</span>
+      <div class="bottom_left">
+        <a href="/funnel_home/<%= funnel %>?stepid=<%= step %>"
+          ><u><i class="fa fa-angle-left"></i>Back to funnels</u></a
+        >
+      </div>
+      <div class="border shadow rounded  pb-4 row mt-3">
+        <div class="col-12 mt-3">
+          <span class=""><i class='fas p-2 text-center  bg-shade rounded-circle small mr-2 ' style="font-size: 12px; width: 30px;">&#xf155;</i><span class="mt-2 font-weight-bolder">Payment Options</span></span>
+          <span class="ml-2"><i class='fas p-2 bg-shade rounded-circle small mr-2 fa fa-gear' style="font-size: 12px; "></i><span class="mt-2">Product Details</span></span>
+
+        </div>
+        <div class="col-12 mt-5  mb-2">
+            <div class="paymentExists">
+              <h6 class="font-weight-bolder">  Integration</h6>
+              <div class=" border rounded" style="height:110px; width: 140px">
+                <img src="" height="80" width="140" id="paymentImage" >
+                <p class="name text-center"></p>
+              </div>
+            </div>
+            <div id="paymentNotExists">
+              <h6>Payment Not Integrated with this Page. Please Add Payment Integration <a href="/funnel_home/<%= funnel %>?stepid=<%= step %>">Here</a></h6>
+              <a href="/funnel_home/<%= funnel %>?stepid=<%= step %>" class="mt-2 btn btn-light border">Add Payment Integration</a>
+              
+            </div>
+        </div>
+        <hr>
+        <div class="col-12 mb-5">
+          <h4>Subscription, Payment Plan, or One-Time Product</h4>
+          <p class="small" >
+            Is this product available as a subscription, a payment plan, or a one-time sell?
+          </p>
+
+          <form id="plan">
+            <div class="custom-control custom-radio mt-2">
+              <input type="radio" class="custom-control-input" id="subscription"checked  name="plan" value="Subscription">
+              <label class="custom-control-label" for="subscription">Subscription</label>
+            </div>
+
+            <div class="custom-control custom-radio mt-2">
+              <input type="radio" class="custom-control-input" id="oneTime" name="plan" value="One Time">
+              <label class="custom-control-label" for="oneTime">One Time</label>
+            </div>
+
+
+            <div class="row mt-5 bg-light">
+              <div class="col-md-6">
+                <div class="card">
+                  <div class="card-body">
+                    <h6>You can earn more sales by recruiting affiliates to promote!</h6>
+                    <p>
+                      Did you know that you can create an Affiliate Product inside of ClickFunnels with just a few simple steps? Backpack makes it super simple to Add Commission Plans to your funnels to promote more sales
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="row mt-3 mb-4">
+              <div class="col-12 text-right">
+                <button type="submit" class="btn bg-shade save-button text-white">Save and Next</button>
+                <a type="button" href="/funnel_home/<%= funnel %>?stepid=<%= step %>" class="btn btn-danger">Cancel</a>
+              </div>
+            </div>
+          </div>
+          </form>
+
+         
+
+    </div>
+  </div>
+</div>
+
+
+<!------------------END-FOOTER----------------->
+<!----------------SCRIPTS------------------>
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+<script src="/js/swal.js"></script>
+
+<script>
+  jQuery(() =>{
+
+    $('#paymentImage').hide();
+    $('#paymentNotExists').hide();
+
+    let integrated = false;
+
+    integrationId = '';
+    let data = {
+      pageId: "<%= step %>",
+      type: 'Payment'
+    }
+
+    $.ajax({
+          type: "POST",
+          url: '/get-page-integrations',
+          data: data,
+          success: function (data) {
+
+            if(data.integration && data.details) {
+              console.log(data)
+              integrationId = data.integration.integrationId._id;
+              integrated = true;
+              $('#paymentImage').show();
+              $('.name').text(data.details.nickname)
+              $('#paymentImage').attr('src', data.details.image)
+            } else {
+              $('#paymentNotExists').show();
+              integrated = false
+            }
+
+          },
+          error: function (data) {
+            console.log(data)
+          }
+      });
+
+
+      $('#plan').on('submit', (e) => {
+        e.preventDefault()
+
+        let value = ''
+
+        if($('#oneTime').prop('checked')) {
+          value = "One Time"
+        } else if ($('#subscription').prop('checked')) {
+          value = "Subscription"
+        } else {
+          value = "false"
+        }
+ 
+        if(integrated && value !== 'false' ) {
+          let data = {
+            integration: integrationId,
+            value: value
+          }
+
+          data = JSON.stringify(data)
+          localStorage.setItem('payment-options', data)
+          window.location.href = '/add-products/<%= funnel %>/<%= step %>/product-details'
+        } else {
+          error('Please Select Payment First to continue')
+        }
+      })
+  })
+</script>

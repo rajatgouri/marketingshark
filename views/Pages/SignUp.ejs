@@ -1,0 +1,56 @@
+<%- include('../Partials/head_files.ejs') %>
+<div class="container mt-5 SignUp_main">
+    <div class="SignUp_heading">
+        <strong>Activate Your FREE 3 Day Trial!</strong> 
+    </div> 
+    <div class="SignUp pb-5">  
+        <form action="/signup" method="POST" id="SignUp">
+            <% if(errorMessage) { %>
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <%= errorMessage %>
+            </div>
+            <% } %>
+            
+            <% if(successMessage) { %>
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <%= successMessage %>
+            </div>
+            <% } %>
+            <div class="form-group form1">
+                <label>FULL NAME</label>
+                <input type="text" name="fullName" class="form-control" value="<%= user ? user.fullName : '' %>" required>
+            </div>
+            <div class="form-group form1">
+                <label>EMAIL</label>
+                <input type="email" name="email" class="form-control" value="<%= user ? user.email : '' %>" required>
+            </div>
+            <div class="form-group form1">
+                <label>PHONE</label>
+                <input type="tel" name="phone" class="form-control" value="<%= user ? user.phone : '' %>" required>
+            </div>
+            <div class="form-group form1">
+                <label>USERNAME</label>
+                <input type="text" name="username" class="form-control" value="<%= user ? user.username : '' %>"
+                    required>
+            </div>
+            <div class="form-group form1">
+                <label>PASSWORD</label>
+                <input type="password" name="password" class="form-control" value="" required>
+            </div>
+            <div class="form-group form1">
+                <label>REPEAT PASSWORD</label>
+                <input type="password" name="confirmPassword" class="form-control" value="" required>
+            </div>
+            <button type="submit" class="z-style btn center-btn SignUp-text">
+                <span>NEXT STEP</span><img src="/images/right-arrow.png" class="SignUp_img" width="33px" style="padding-left: 10px; padding-bottom: 5px;">
+            </button>
+        </form>      
+    </div>
+</div>
+<%- include('../Partials/footer.ejs') %>

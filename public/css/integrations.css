@@ -1,0 +1,42 @@
+#apiKeyModal .modal-dialog .modal-content .modal-header .modal-title {
+    position: absolute;
+}
+
+
+/* .user_email_integrations_list , .email_integrations_list {
+    position: absolute;
+    width: 100%;
+}  */
+
+.email_integrations_list { 
+    display: none;
+}
+
+.payment_integrations_list { 
+    display: none;
+}
+
+.search_form_integrations .form-control-feedback_integrations {
+    position: absolute;
+    padding: 4.5px;
+    display: block;
+}
+
+.toast {
+    position: absolute;
+    right: 0;
+    z-index: 1000;
+}
+
+
+.hide {
+    display: none;
+}
+
+
+.custom-control-input:checked~.custom-control-label::before {
+    color: #fff;
+    border-color: #28a745;
+    background-color: #28a745;
+
+}

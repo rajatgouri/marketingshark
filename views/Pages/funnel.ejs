@@ -1,0 +1,97 @@
+<%- include('../Partials/header.ejs') %>
+<div class="container main_div text-center" style="padding-bottom: 2%;">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="funnel_title">
+        <h4 class="header-title p_4">My Funnels</h4>
+        <p class="p_2">Here lies all of your beautifully crafted funnels!</p>
+        <div class="search_form">
+          <form id="search-form" action="#" method="POST">
+            <span class="form-control-feedback"
+              ><img src="/images/search.svg" id="search_img" alt="search"
+            /></span>
+            <input
+              id="myInput"
+              type="text"
+              name="search"
+              class="form-control src-form"
+            />
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="table table-borderless">
+            <thead>
+              <tr>
+                <th>
+                  <div class="btn-group custom_btn">
+                    <button
+                      type="button"
+                      class="btn dropdown-toggle font-weight-bold"
+                      data-toggle="dropdown"
+                    >
+                      Funnel Name
+                    </button>
+                  </div>
+                </th>
+                <th><div class="btn-group custom_btn">
+                  <button
+                    type="button"
+                    class="btn dropdown-toggle font-weight-bold"
+                    data-toggle="dropdown"
+                  >
+                    Date created
+                  </button>
+                </div></th>
+                <th><div class="btn-group custom_btn">
+                  <button
+                    type="button"
+                    class="btn dropdown-toggle font-weight-bold"
+                    data-toggle="dropdown"
+                  >
+                    Lead Genertaed
+                  </button>
+                </div></th>
+              </tr>
+            </thead>
+            <tbody>
+              <% funnel.map(f => { %>
+              <tr >
+                <td style="vertical-align: middle;">
+                    <img src="<%= f.thumbnail %>" width="80" height="50" class=" mr-2">
+                    <a href="/funnel_home/<%= f._id %>?stepid=<%= f.steps[0]._id %>">
+                      <u><%= f.funnelname %></u>
+                    </a>
+                  </div>
+                </td>
+                <td style="vertical-align: middle;">
+                  <%= f.updatedAt.toString().slice(0,16) %>
+                </td>
+                <td style="vertical-align: middle;">
+                  0
+                </td>
+              </tr>
+              <% }) %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <%- include('../Partials/footer.ejs') %>
+  <script>
+    $(document).ready(function () {
+      $('#myInput').on('keyup', function () {
+        var value = $(this).val().toLowerCase();
+        $('#myTable tr').filter(function () {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+        });
+      });
+    });
+  </script>
+</div>

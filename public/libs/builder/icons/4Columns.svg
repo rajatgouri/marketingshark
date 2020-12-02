@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="46" height="30" viewBox="0 0 46 30">
+  <defs>
+    <clipPath id="clip">
+      <use xlink:href="#fill"/>
+    </clipPath>
+  </defs>
+  <g id="Group_486" data-name="Group 486" transform="translate(0 -0.47)">
+    <g id="Rectangle_326" data-name="Rectangle 326" transform="translate(0 0.47)" fill="none" stroke="#1da2f4" stroke-width="1">
+      <rect width="46" height="30" stroke="none"/>
+      <rect x="0.5" y="0.5" width="45" height="29" fill="none"/>
+    </g>
+    <g id="Rectangle_424" data-name="Rectangle 424" transform="translate(0 0.47)" fill="none" stroke="#1da2f4" stroke-width="1">
+      <rect width="23" height="30" stroke="none"/>
+      <rect x="0.5" y="0.5" width="22" height="29" fill="none"/>
+    </g>
+    <g id="Group_443" data-name="Group 443" transform="translate(-32 -32)">
+      <g id="Group_415" data-name="Group 415" transform="translate(32 32.47)">
+        <g id="Rectangle_326-2" data-name="Rectangle 326" transform="translate(0 0)" fill="none" stroke="#1da2f4" stroke-width="1">
+          <rect width="12" height="30" stroke="none"/>
+          <rect x="0.5" y="0.5" width="11" height="29" fill="none"/>
+        </g>
+        <g id="Rectangle_424-2" data-name="Rectangle 424" transform="translate(0 0)" fill="none" stroke="#1da2f4" stroke-width="1">
+          <rect id="fill" height="30" stroke="none"/>
+          <path d="M0,0.5h0.000010000005204346962M0.5,0v30M0.000010000005204346962,29.5h-0.000010000005204346962M-0.49998999999479565,30v-30" fill="none" clip-path="url(#clip)"/>
+        </g>
+      </g>
+    </g>
+    <g id="Rectangle_326-3" data-name="Rectangle 326" transform="translate(22 0.47)" fill="none" stroke="#1da2f4" stroke-width="1">
+      <rect width="13" height="30" stroke="none"/>
+      <rect x="0.5" y="0.5" width="12" height="29" fill="none"/>
+    </g>
+  </g>
+</svg>

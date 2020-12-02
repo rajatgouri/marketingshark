@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="334" height="36" viewBox="0 0 334 36">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.614" y1="0.722" x2="0" y2="0.739" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#29b5ff"/>
+      <stop offset="1" stop-color="#155b80"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_741" data-name="Group 741" transform="translate(-483 -2462)">
+    <path id="Path_554" data-name="Path 554" d="M0,0H42L33.15,13.587,42,28H0Z" transform="translate(775 2470)" fill="url(#linear-gradient)"/>
+    <path id="Path_555" data-name="Path 555" d="M0,0H42L33.15,13.587,42,28H0Z" transform="translate(525 2498) rotate(180)" fill="url(#linear-gradient)"/>
+    <rect id="Rectangle_1213" data-name="Rectangle 1213" width="283" height="28" transform="translate(509 2462)" fill="#29b5ff"/>
+    <text id="Standard_Sales_Funnels" data-name="Standard Sales Funnels" transform="translate(650 2482)" fill="#fff" font-size="16" font-family="Roboto-Bold, Roboto" font-weight="700"><tspan x="-84.656" y="0">Standard Sales Funnels</tspan></text>
+  </g>
+</svg>

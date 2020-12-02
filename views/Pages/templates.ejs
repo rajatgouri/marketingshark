@@ -1,0 +1,736 @@
+<%- include('../Partials/header.ejs') %>
+<div class="container template_div">
+  <div class="row">
+    <div class="col-md-12 text-center mt-5">
+      <h1 class="p_1_new">
+        <span class="temStep">Step 1:</span> Select your niche!
+      </h1>
+      <p class="p_2_new">
+        Browse ALL funnel templates below <br />or sort by your niche.
+      </p>
+    </div>
+  </div>
+  <hr />
+  <!-----------------------------------SELECT-YOUR-NICHE---------------------------------->
+  <%- include('../Partials/funnelForm.ejs') %>
+  <div class="row mt-5">
+    <div class="col-md-12 text-center">
+      <div class="dropdown">
+        <button class="CustomDrop" type="button" data-toggle="dropdown">
+          <span class="DropBtn">Select your niche</span
+          ><img
+            src="/images/down_triangle.svg"
+            alt="triangle"
+            width="30"
+            class="DropArrow float-right"
+          />
+        </button>
+        <ul class="dropdown-menu DropMenu">
+          <li><a href="#">Select your niche</a></li>
+          <li><a href="#">Select your niche</a></li>
+          <li><a href="#">Select your niche</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="row mt-4">
+    <div class="col-lg-2 mb-2">
+      <img
+        src="/images/right_arrow.svg"
+        alt="R_arrow"
+        class="float-right mt-2"
+      />
+    </div>
+    <div class="col-lg-3 mb-2">
+      <div class="row border StepFirstBizz">
+        <div class="col-lg-3">
+          <img src="/images/bizz_opp.svg" alt="bizz" width="35" class="mt-2" />
+        </div>
+        <div class="col-lg-9 pr-0">
+          <p class="StepContent mb-1">WORK FROM HOME</p>
+          <h5 class="StepContent">BIZ OPP</h5>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3 mb-2">
+      <div class="row border StepFirstBizz">
+        <div class="col-lg-3">
+          <img
+            src="/images/product_service.svg"
+            alt="bizz"
+            width="35"
+            class="mt-2"
+          />
+        </div>
+        <div class="col-lg-9 pr-0">
+          <p class="StepContent mb-1">WORK FROM HOME</p>
+          <h5 class="StepContent">PRODUCT / SERVICE</h5>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-2 mb-2">
+      <div class="row border StepFirstBizz">
+        <div class="col-lg-3">
+          <img
+            src="/images/solar.svg"
+            alt="solar"
+            width="40"
+            class="mt-2 mb-2"
+          />
+        </div>
+        <div class="col-lg-9">
+          <p class="StepContent mb-1"></p>
+          <h5 class="StepContent mt-3 pl-3">SOLAR</h5>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-2">
+      <img src="/images/left_arrow.svg" alt="l_arrow" class="mt-2" />
+    </div>
+    <button
+      class="StandardBtn z-style btn center-btn mb-2"
+      data-toggle="modal"
+      data-target="#myModal"
+      style="
+        border-radius: 10px;
+        padding: 6px !important;
+        margin-top: 35px;
+        width: 25%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+          0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      "
+    >
+      <div class="row pt-2 pl-2">
+        <img
+          src="/images/watch_tutorial_1.svg"
+          style="padding-right: 10px;"
+          width="20%"
+          alt="watch"
+        />
+        <p class="mb-1">UNSURE WHICH IS RIGHT FOR YOU?</p>
+        <h5 style="font-size: 16px; margin-left: 55px; margin-top: -21px;">
+          WATCH A TUTORIAL
+        </h5>
+      </div>
+    </button>
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Funnel Shark</h4>
+            <button type="button" class="close" data-dismiss="modal">
+              &times;
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>Video</p>
+            <iframe
+              width="auto"
+              height="300"
+              src="https://www.youtube.com/embed/iYEr6zxSZAI?autoplay=1&mute=1"
+              frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              style="margin-left: auto; margin-right: auto; display: block;"
+            ></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr class="mt-5" />
+  <!-------------------------------END-SELECT-YOUR-NICHE----------------------------->
+  <!----------------------------------STEP-2-------------------------------->
+  <div class="row">
+    <div class="col-md-12 text-center mt-4 mb-2">
+      <h1 class="p_1_new">
+        <span class="temStep">Step 2:</span> Select your template!
+      </h1>
+    </div>
+  </div>
+  <hr class="mt-5" />
+  <!---------------------------STANDARD-LEAD--------------------------------->
+  <div class="row">
+    <div class="col-md-12 text-center mt-4 mb-2">
+      <h1 class="p_1_new" style="font-size: 30px;">Lead Gen Funnels</h1>
+      <p style="font-size: 13px; color: #777474; font-weight: 600;">
+        These funnels are designed to help you generate leads!
+      </p>
+    </div>
+  </div>
+  <hr class="mt-5" />
+  <div class="row">
+    <img
+      src="/images/standerd.svg"
+      class="StandImg"
+      width="40%"
+      alt="stand"
+    /><br />
+  </div>
+  <div class="row mt-3">
+    <p class="StandImg">2 Step Funnel: Opt In Page / Thank You Page</p>
+  </div>
+
+  <div class="STDLEAD2-container" style="background-color: #fafafa;">
+    <div class="row STDLEAD-2">
+      <% for(var i=0; i < stdLead2.length; i++){ %>
+        <div class="col-lg-3  StandTemp StandTemp1 mt-4">
+          <h6 style="margin-top: -20px"><%= stdLead2[i].name %></h6>
+          <img
+            src="<%= stdLead2[i].thumbnail %>"
+            class="StandTempImg"
+            width="100%"
+            alt="2temp"
+          />
+          <div class="middle">
+  
+            <a
+              href="/preview/<%= stdLead2[i]._id %>"
+              type="button"
+              class="z-style Standbtn"
+              style="
+                padding: 6px !important;
+                padding-top: 15px !important;
+                padding-bottom: 10px !important;
+                width: 145px;
+                border-radius: 10px;
+              "
+            >
+              <span class="StandPre border-right">PREVIEW</span
+              ><img
+                src="/images/preview.svg"
+                width="30"
+                class="ml-2 pb-1"
+                alt="pre"
+              /></a>
+            <br />
+            <button
+              onclick="modelFunnelName(this)"
+              class="z-style Standbtn mt-3"
+              data-path="<%= stdLead2[i]._id %>"
+              style="
+                padding: 6px !important;
+                padding-top: 15px !important;
+                padding-bottom: 6px !important;
+                width: 145px;
+                border-radius: 10px;
+              "
+            >
+              <span class="StandPre border-right">USE THIS </span
+              ><img
+                src="/images/use_this.svg"
+                width="25"
+                class="ml-2 pb-1"
+                alt="Use"
+              />
+            </button>
+          </div>
+          
+        </div>
+      <% }%>
+    </div>
+    
+    <div class="col-12 text-center mb-3" >
+      <% if (stdLead2.length === 3) { %>
+        <a class="StandLoad pb-4" id="STDLEAD-2" total="<%= stdLead2.length %>"><u>Load More</u></a>
+
+      <% } %>
+    </div>
+  </div>
+  <!-------------------------------END-STANDARD-LEAD------------------------------->
+  <!-------------------------------FREE-GIVAWAY-LEAD----------------------------------------->
+  <div class="row mt-5">
+    <img
+      src="/images/free_giveaway.svg"
+      class="StandImg"
+      width="40%"
+      alt="FreeGive"
+    /><br />
+  </div>
+  <div class="row mt-3">
+    <p class="StandImg">2 Step Funnel: Opt In Page / Thank You Page</p>
+  </div>
+  <div class="giveway2-container" style="background-color: #fafafa;">
+    <div class="row GIVEWAY-2">
+    <% for(var i=0; i < giveway2.length; i++){ %>
+      <div class="col-lg-3  StandTemp StandTemp1 mt-4">
+        <h6 style="margin-top: -20px"><%= giveway2[i].name %></h6>
+        <img
+          src="<%= giveway2[i].thumbnail %>"
+          class="StandTempImg"
+          width="100%"
+          alt="2temp"
+        />
+        <div class="middle">
+
+          <a
+            href="/preview/<%= giveway2[i]._id %>"
+            type="button"
+            class="z-style Standbtn"
+            style="
+              padding: 6px !important;
+              padding-top: 15px !important;
+              padding-bottom: 10px !important;
+              width: 145px;
+              border-radius: 10px;
+            "
+          >
+            <span class="StandPre border-right">PREVIEW</span
+            ><img
+              src="/images/preview.svg"
+              width="30"
+              class="ml-2 pb-1"
+              alt="pre"
+            /></a>
+          <br />
+          <button
+            onclick="modelFunnelName(this)"
+            class="z-style Standbtn mt-3"
+            data-path="<%= giveway2[i]._id %>"
+            style="
+              padding: 6px !important;
+              padding-top: 15px !important;
+              padding-bottom: 6px !important;
+              width: 145px;
+              border-radius: 10px;
+            "
+          >
+            <span class="StandPre border-right">USE THIS </span
+            ><img
+              src="/images/use_this.svg"
+              width="25"
+              class="ml-2 pb-1"
+              alt="Use"
+            />
+          </button>
+        </div>
+        
+      </div>
+    <% }%>
+  </div>
+    <div class="col-12 text-center mb-3" >
+      <% if (giveway2.length === 3) { %>
+        <a class="StandLoad pb-4" id="GIVEWAY-2" total="<%= giveway2.length %>"><u>Load More</u></a>
+      <% } %>
+      </div>
+  </div>
+
+  <div class="row mt-5">
+    <div class="col-md-12 text-center mt-4 mb-2">
+      <h1 class="p_1_new" style="font-size: 30px;">Sales Funnels</h1>
+      <p style="font-size: 13px; color: #777474; font-weight: 600;">
+        These funnels are designed to help you sell a product!
+      </p>
+    </div>
+  </div>
+  <hr class="mt-5" />
+  <!--------------------------END-FREE-GIVEAWAY-LEAD------------------------------->
+  <!------------------------------STANDARD-SALES--------------------------------------->
+  <div class="row mt-5">
+    <img
+      src="/images/standerd_sales_funnel.svg"
+      class="StandImg"
+      width="40%"
+      alt="StandSale"
+    /><br />
+  </div>
+  <div class="row mt-3">
+    <p class="StandImg">
+      3+ Step Funnel: Sales Page / Order Form / Confirmation Page
+    </p>
+  </div>
+  <div class="STDSALES3-container" style="background-color: #fafafa;">
+    <div class="row STDSALES-3">
+      <% for(var i=0; i < stdSales3.length; i++){ %>
+        <div class="col-lg-3  StandTemp StandTemp1 mt-4">
+          <h6 style="margin-top: -20px"><%= stdSales3[i].name %></h6>
+          <img
+            src="<%= stdSales3[i].thumbnail %>"
+            class="StandTempImg"
+            width="100%"
+            alt="2temp"
+          />
+          <div class="middle">
+  
+            <a
+              href="/preview/<%= stdSales3[i]._id %>"
+              type="button"
+              class="z-style Standbtn"
+              style="
+                padding: 6px !important;
+                padding-top: 15px !important;
+                padding-bottom: 10px !important;
+                width: 145px;
+                border-radius: 10px;
+              "
+            >
+              <span class="StandPre border-right">PREVIEW</span
+              ><img
+                src="/images/preview.svg"
+                width="30"
+                class="ml-2 pb-1"
+                alt="pre"
+              /></a>
+            <br />
+            <button
+              onclick="modelFunnelName(this)"
+              class="z-style Standbtn mt-3"
+              data-path="<%= stdSales3[i]._id %>"
+              style="
+                padding: 6px !important;
+                padding-top: 15px !important;
+                padding-bottom: 6px !important;
+                width: 145px;
+                border-radius: 10px;
+              "
+            >
+              <span class="StandPre border-right">USE THIS </span
+              ><img
+                src="/images/use_this.svg"
+                width="25"
+                class="ml-2 pb-1"
+                alt="Use"
+              />
+            </button>
+          </div>
+          
+        </div>
+      <% }%>
+    </div>
+    
+    <div class="col-12 text-center mb-3" >
+      <% if (stdSales3.length === 3) { %>
+        <a class="StandLoad pb-4" id="STDSALES-3" total="<%= stdSales3.length %>"><u>Load More</u></a>
+
+      <% } %>
+    </div>
+  </div>
+  <!--------------------------------END-STANDARD-SALES----------------------------------->
+  <!-------------------------------------FREE-SHIPPING-------------------------------------->
+  <div class="row mt-5">
+    <img
+      src="/images/free_shipping.svg"
+      class="StandImg"
+      width="40%"
+      alt="FreeShip"
+    /><br />
+  </div>
+  <div class="row mt-3">
+    <p class="StandImg">
+      4+ Step Funnel: Sales Page / Order Form / Upsell Page(s) / Confirmation
+      Page
+    </p>
+  </div>
+  <div class="row mt-2" style="background-color: #fafafa;">
+    <% for ( let i=1; i<=6; i++){ %>
+    <div class="col-lg-3 StandTemp StandTemp1 mt-4">
+      <img
+        src="/images/all_temp.svg"
+        class="StandTempImg"
+        width="100%"
+        alt="allTemp"
+      />
+      <div class="middle">
+        <button
+          class="z-style Standbtn"
+          style="
+            padding: 6px !important;
+            padding-top: 15px !important;
+            padding-bottom: 10px !important;
+            width: 145px;
+            border-radius: 10px;
+          "
+        >
+          <span class="StandPre border-right">PREVIEW </span
+          ><img
+            src="/images/preview.svg"
+            width="30"
+            class="ml-2 pb-1"
+            alt="Pre1"
+          /></button
+        ><br />
+        <button
+          onclick="modelFunnelName(this)"
+          class="z-style Standbtn mt-3"
+          data-path="demo/narrow-jumbotron"
+          style="
+            padding: 6px !important;
+            padding-top: 15px !important;
+            padding-bottom: 6px !important;
+            width: 145px;
+            border-radius: 10px;
+          "
+        >
+          <span class="StandPre border-right">USE THIS </span
+          ><img
+            src="/images/use_this.svg"
+            width="25"
+            class="ml-2 pb-1"
+            alt="use1"
+          />
+        </button>
+      </div>
+    </div>
+    <% }%>
+    <a href="#" class="StandLoad  pb-4"><u>Load More</u></a>
+  </div>
+  <div class="row mt-5">
+    <div class="col-md-12 text-center mt-4 mb-2">
+      <h1 class="p_1_new" style="font-size: 30px;">
+        Personal Branding Funnels
+      </h1>
+      <p style="font-size: 13px; color: #777474; font-weight: 600;">
+        These funnels are designed to help you generate leads!
+      </p>
+    </div>
+  </div>
+  <hr class="mt-5" />
+  <!---------------------------------END-FREE-SHIPPING--------------------------------->
+  <!--------------------------------------SINGLE-PAGE-WEBSITE----------------------------------------->
+  <div class="row mt-5">
+    <img
+      src="/images/single1_page.svg"
+      class="StandImg"
+      width="40%"
+      alt="Single"
+    /><br />
+  </div>
+  <div class="row mt-3">
+    <p class="StandImg">1 Page: About / Bio page</p>
+  </div>
+  <div class="row mt-2" style="background-color: #fafafa;">
+    <% for ( let i=1; i<=6; i++){ %>
+    <div class="col-lg-3 StandTemp StandTemp1 mt-4">
+      <img
+        src="/images/3rd_temp.svg"
+        class="StandTempImg"
+        width="100%"
+        alt="3rd-temp"
+      />
+      <div class="middle">
+        <button
+          class="z-style Standbtn"
+          style="
+            padding: 6px !important;
+            padding-top: 15px !important;
+            padding-bottom: 10px !important;
+            width: 145px;
+            border-radius: 10px;
+          "
+        >
+          <span class="StandPre border-right">PREVIEW </span
+          ><img
+            src="/images/preview.svg"
+            width="30"
+            class="ml-2 pb-1"
+            alt="pre2"
+          /></button
+        ><br />
+        <button
+          onclick="modelFunnelName(this)"
+          class="z-style Standbtn mt-3"
+          data-path="demo/narrow-jumbotron"
+          style="
+            padding: 6px !important;
+            padding-top: 15px !important;
+            padding-bottom: 6px !important;
+            width: 145px;
+            border-radius: 10px;
+          "
+        >
+          <span class="StandPre border-right">USE THIS </span
+          ><img
+            src="/images/use_this.svg"
+            width="25"
+            class="ml-2 pb-1"
+            alt="use2"
+          />
+        </button>
+      </div>
+    </div>
+    <% }%>
+    <a href="#" class="StandLoad pb-4"><u>Load More</u></a>
+  </div>
+  <!-------------------------------------END-SINGLE-PAGE-WEBSITE---------------------------------->
+  <!-------------------------------PERSONAL-LIST-BUILDING----------------------------------------->
+  <div class="row mt-5">
+    <img src="/images/personal_list.svg" class="StandImg" width="40%" /><br />
+  </div>
+  <div class="row mt-3">
+    <p class="StandImg">2 Step Funnel: Opt In Page / Thank You Page</p>
+  </div>
+  <div class="row mt-2" style="background-color: #fafafa;">
+    <% for ( let i=1; i<=6; i++){ %>
+    <div class="col-lg-3 StandTemp StandTemp1 mt-4">
+      <img
+        src="/images/only_frame.svg"
+        class="StandTempImg"
+        width="100%"
+        alt="onlyFrame"
+      />
+      <div class="middle">
+        <button
+          class="z-style Standbtn"
+          style="
+            padding: 6px !important;
+            padding-top: 15px !important;
+            padding-bottom: 10px !important;
+            width: 145px;
+            border-radius: 10px;
+          "
+        >
+          <span class="StandPre border-right">PREVIEW </span
+          ><img
+            src="/images/preview.svg"
+            width="30"
+            class="ml-2 pb-1"
+            alt="pre3"
+          /></button
+        ><br />
+        <button
+          onclick="modelFunnelName(this)"
+          class="z-style Standbtn mt-3"
+          data-path="demo/narrow-jumbotron"
+          style="
+            padding: 6px !important;
+            padding-top: 15px !important;
+            padding-bottom: 6px !important;
+            width: 145px;
+            border-radius: 10px;
+          "
+        >
+          <span class="StandPre border-right">USE THIS </span
+          ><img
+            src="/images/use_this.svg"
+            width="25"
+            class="ml-2 pb-1"
+            alt="use3"
+          />
+        </button>
+      </div>
+    </div>
+    <% }%>
+    <a href="#" class="StandLoad pb-4"><u>Load More</u></a>
+  </div>
+
+  <!--------------------------END-PERSONAL-LIST-BUILDING------------------------------->
+  <!-----------------------------------BOTTOM--------------------------------------->
+  <div class="row bottom">
+    <div class="col-md-6 bottom_left">
+      <a href="/home" style="font-size: 15px;"
+        ><u><i class="fa fa-angle-left"></i>Back</u></a
+      >
+    </div>
+    <div class="col-md-6 bottom_right">
+      <a
+        href="/editor"
+        class="TempBot"
+        style="font-size: 15px; margin-left: 59px;"
+        ><u>Start from blank page</u>
+      </a>
+    </div>
+  </div>
+  <!-----------------------------------END-BOTTOM------------------------------------>
+</div>
+<%- include('../Partials/footer.ejs') %>
+<script src="/js/funnel.js"></script>
+<script>
+  jQuery(() => {
+
+    $('.StandLoad').on('click', function(e) {
+      e.preventDefault();
+
+      let button = $(this)
+      let id = ($(this).attr('id'))
+      let total = ($(this).attr('total'))
+      $.ajax({
+          type: "POST",
+          url: '/get-category-template',
+          data: {
+            id: id,
+            total: total
+          },
+          success: function (data) {
+            console.log(data)     
+            let templates = data.templates;
+            button.attr('total', parseInt(total) + parseInt(data.templates.length))
+            if(templates.length < 3) {
+              button.hide()
+            }
+            
+            for (let i=0 ; i< templates.length ;i++) {
+              let div = `
+              <div class="col-lg-3  StandTemp StandTemp1 mt-4">
+                <h6 style="margin-top: -20px">${templates[i].name}</h6>
+                <img
+                  src="${templates[i].thumbnail}"
+                  class="StandTempImg"
+                  width="100%"
+                  alt="2temp"
+                />
+                <div class="middle">
+        
+                  <a
+                    href="/preview/${templates[i]._id}"
+                    type="button"
+                    class="z-style Standbtn"
+                    style="
+                      padding: 6px !important;
+                      padding-top: 15px !important;
+                      padding-bottom: 10px !important;
+                      width: 145px;
+                      border-radius: 10px;
+                    "
+                  >
+                    <span class="StandPre border-right">PREVIEW</span
+                    ><img
+                      src="/images/preview.svg"
+                      width="30"
+                      class="ml-2 pb-1"
+                      alt="pre"
+                    /></a>
+                  <br />
+                  <button
+                    onclick="modelFunnelName(this)"
+                    class="z-style Standbtn mt-3"
+                    data-path="${templates[i]._id}"
+                    style="
+                      padding: 6px !important;
+                      padding-top: 15px !important;
+                      padding-bottom: 6px !important;
+                      width: 145px;
+                      border-radius: 10px;
+                    "
+                  >
+                    <span class="StandPre border-right">USE THIS </span
+                    ><img
+                      src="/images/use_this.svg"
+                      width="25"
+                      class="ml-2 pb-1"
+                      alt="Use"
+                    />
+                  </button>
+                </div>
+                
+              </div>
+              `
+
+
+              $(`.${id}`).append(div)
+            }
+
+            
+
+          },
+          error: function (data) {
+            console.log(data)              
+          }
+      });
+    })
+  })
+</script>

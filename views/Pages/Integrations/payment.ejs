@@ -1,0 +1,83 @@
+<div>
+    <div class="row payment_integrations-container">
+        <div class="col-12">
+            <div class="row pt-3 pb-3">
+                <div class="col-md-6  ">
+                    <h6 class="mt-2"><b>Payment Intergations</b></h6>
+                </div>
+                <div class="col-md-6 ">
+                    <div class="search_form_integrations">
+                        <form action="#">
+                            <span class="form-control-feedback_integrations"><img
+                                    src="/images/search.svg" id="search_img" alt="search"></span>
+                            <input type="text" name="search" class="form-control"
+                                placeholder="Search Integrations" id="integration">
+    
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3 user_payment_integrations_list">
+                <div class="col-xl-4 mt-3 add_payment_integrations_container">
+                    <div class="add_integrations">
+                        <div class="add_integration_border">
+                            <a href="#" style="text-decoration:none;"><img
+                                    src="/images/Add_new_intigration.svg" width="20%">
+                                <div class="add_img_content">
+                                    <span class="add_integrations_content">ADD NEW
+                                        <br>INTEGRATION</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <% for(var i=0; i < payment.length; i++){ %>
+                    <div class="col-xl-4  mt-3 " >
+                        <div class="payment-integrations" id="<%= payment[i]._id %>" vendor="<%= payment[i].vendor %>">
+                            <img src="<%= payment[i].image %>" alt="group_87" height="50"  >
+                            <div class="mailchimp_contant"  >
+                                <span class="maichimp_suername_title"  ><%= payment[i].vendor %>: </span><span class="mailchimp_username"  ><%= payment[i].nickname %></span><br>
+                                <span class="integrated_date"  >Integrated: <%= new Date(payment[i].createdAt).toDateString() %></span><br>
+                                <span class="integrated_status"  >Status: <img src="<%= payment[i].status === true ?  '/images/Ellipse 23.svg': '/images/red.png'%>" height="9" width="9""> <%= payment[i].status === true ? 'Connected' : 'Disconnected' %></span>
+                            </div>
+                        </div>
+                    </div>
+                <% } %>
+            </div>
+        </div>
+    </div>
+
+    <div class="row payment_integrations_list">
+        <div class="col-12">
+            <div class="row pt-3 pb-3">
+                <div class="col-12">
+                    <h6>
+                        <button class="btn  btn-sm mr-2 back-payment-intergations">
+                            <i class="fa fa-angle-left"></i>
+                        </button>
+                        <b>All payments Intergations</b>
+                    </h6>
+                </div>
+                <div class="col-md-4  mt-3 ">
+                    <div class="integrations_stripe" data-toggle="modal" data-target="#apiKeyModal">
+                        <img src="/images/stripe.png" height="50" alt="group_87">
+                        <div class="mailchimp_contant">
+                            <span class="maichimp_suername_title">Stripe</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4  mt-3 ">
+                    <div class="integrations_paypal" data-toggle="modal" data-target="#apiKeyModal">
+                        <img src="/images/paypal.png" height="50" alt="group_87">
+                        <div class="mailchimp_contant">
+                            <span class="maichimp_suername_title">Pay Pal</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+</div>

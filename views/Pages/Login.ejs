@@ -1,0 +1,69 @@
+<%- include('../Partials/head_files.ejs') %>
+
+  <body style="background-image:none !important;">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-6"> 
+          <div class="LoginLeft">   
+            <a href="#" class="navbar-brand logo"><img src="/images/MARKETING SHARK.png"></a>
+            <div class="Login_heading"><strong>Log in to you FunnelShark Account</strong></div>
+            <div class="Login_sub_heading"><span>Need an account? </span><a href="/SignUp"><u>Sign up for free.</u></a></div>
+         
+          </div>
+          <div class="SignUp Login">  
+            <form action="/login" method="POST" id="Login">
+              <% if(errorMessage) { %>
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                  <%= errorMessage %>
+                </div>
+              <% } %>
+              <% if(successMessage || fmsg.length > 0) { %>
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                  <%= successMessage ? successMessage : fmsg[0] %>
+                </div>
+              <% } %>
+                <div class="form-group form1">
+                    <label>Email Address</label>
+                    <input type="email" name="email" class="form-control" value="<%= user ? user.email : '' %>"
+                      required>
+                </div>
+                <div class="form-group form1">
+                    <label>PASSWORD</label>
+                    <input type="password" name="password" class="form-control" value="<%= user ? user.password : '' %>" required>
+                </div>
+                <button type="submit" class="z-style btn center-btn SignUp-text LoginText">
+                    <span>LOG IN</span><img src="/images/next_arrow.svg" class="SignUp_img" width="25px" style="margin-left: 8px; margin-top: -9px;">
+                </button>
+            </form>    
+            <div class="text-center">
+                <a href="#" class="ForgetPassword"><u>Forgot Password?</u></a>
+            </div>
+        </div>
+      </div>
+      <div class="col-sm-6" style="background-image: url(/images/Rectangle_146.jpg);background-size: cover; background-repeat: no-repeat;">
+        <div class="LoginRight">
+            <button type="submit" class="z-style_1"><span>NEW FEATURE ALERT!</span></button>
+            <div class="LoginRight_head mt-4 mb-4">
+                <strong>Funnel Shark has released <br>new funnel templates!</strong>
+            </div>
+            <p class="LoginContent">Lorem Ipsum is simply dummy text of the printing<br> and typesetting industry. Lorem Ipsum has been the <br>industry's standard dummy text ever since the 1500s,<br> when an unknown printer took a galley of type and <br>scrambled it to make a type specimen book. </p>
+            <div class="row LoginImages">
+                    <div class="col-md-3 LoginImage2"><img src="/images/Mask Group 17.jpg" width="100%" alt="group_17" class="Login_img"></div>
+                    <div class="col-md-3 LoginImage2"><img src="/images/Mask Group 18.jpg" width="100%" alt="group_18" class="Login_img"></div>
+                    <div class="col-md-3 LoginImage2"><img src="/images/Mask Group 19.jpg" width="100%" alt="group_19" class="Login_img"></div>  
+            </div> 
+            <div class="row LoginImages1">
+                <div class="col-md-3 LoginImage2"><img src="/images/Mask Group 35.png" width="100%" alt="group_35" class="Login_img"></div>
+                <div class="col-md-3  LoginImage2"><img src="/images/Mask Group 34.png" width="100%" alt="group_34" class="Login_img"></div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</body>

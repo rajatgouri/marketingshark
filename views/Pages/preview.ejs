@@ -1,0 +1,21 @@
+<%- include('../Partials/header.ejs') %>
+<div class="container template_div p-4">
+    <h2 class="bg-orange  text-white shadow-lg text-center p-4"><%= template.name %></h2>
+    <% for(var i=0; i < template.steps.length; i++){ %>
+        <h4 class="text-orange mt-4 text-shadow"><span class="mr-3 pt-2 pb-2 pl-3 pr-3 bg-orange text-white rounded-circle"><%= i+1 %></span>Page <%= template.steps[i].pageId.type %></h4>
+        <img src="<%= template.steps[i].pageId.thumbnail %>" class="h-100 w-100 border rounded mt-2 mb-2">
+    <% } %>
+  <!-----------------------------------END-BOTTOM------------------------------------>
+</div>
+<style>
+    .bg-orange {
+        background: linear-gradient(45deg, #0DC7FE, #08EAB8);
+    }
+    .text-orange {
+        color: #0DC7FE;
+    }
+    .text-shadow {
+        text-shadow: 1.5px 1px #8b8888;
+    }
+</style>
+<%- include('../Partials/footer.ejs') %>

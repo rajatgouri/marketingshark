@@ -1,0 +1,285 @@
+<%- include('../Partials/header.ejs') %>
+<!----------------------VERTICAL-TABS-------------------------->
+<div class="toast" data-autohide="false">
+    <div class="toast-header">
+        <strong class="mr-auto header text-success">Success</strong>
+        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">
+            &times;
+        </button>
+    </div>
+    <div class="toast-body"></div>
+</div>
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-md-3 mb-3 integration_left">
+            <div class="btn1_integrations">
+                <a href="#" class="list-group-item integration_button"><span>INTEGRATIONS </span></a>
+            </div>
+            <ul class="nav nav-pills flex-column" id="myTab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link nav-email <%= type === 'Email' ? 'active': '' %>" href="/integration/email" id="home-tab " aria-selected="true">Email
+                        <svg id="Layer_1" data-name="Layer 1" width="6" viewBox="0 0 6 23">
+                            <defs>
+                                <linearGradient id="linear-gradient" x1="-284.35" y1="457.93" x2="-285.35" y2="457.43"
+                                    gradientTransform="matrix(0, 23, 6, 0, -2744, 6562)" gradientUnits="userSpaceOnUse">
+                                    <stop offset="0" stop-color="#1da2f4" />
+                                    <stop offset="1" stop-color="#0fedb2" />
+                                </linearGradient>
+                            </defs>
+                            <title>Polygon 17</title>
+                            <path id="Polygon_17" data-name="Polygon 17" class="cls-132 abs" d="M6,11.5,0,23V0Z" />
+                        </svg>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link <%= type === 'Domain' ? 'active': '' %>" id="profile-tab"  href="/integration/domain"  aria-selected="false">Domain
+                        <svg id="Layer_1" data-name="Layer 1" width="6" viewBox="0 0 6 23">
+                            <defs>
+                                <linearGradient id="linear-gradient" x1="-284.35" y1="457.93" x2="-285.35" y2="457.43"
+                                    gradientTransform="matrix(0, 23, 6, 0, -2744, 6562)" gradientUnits="userSpaceOnUse">
+                                    <stop offset="0" stop-color="#1da2f4" />
+                                    <stop offset="1" stop-color="#0fedb2" />
+                                </linearGradient>
+                            </defs>
+                            <title>Polygon 17</title>
+                            <path id="Polygon_17" data-name="Polygon 17" class="cls-132 abs" d="M6,11.5,0,23V0Z" />
+                        </svg>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-payment <%= type === 'Payment' ? 'active': '' %>" id="contact-tab"  href="/integration/payment" 
+                        aria-controls="contact" aria-selected="false">Payment Gateway
+                        <svg id="Layer_1" data-name="Layer 1" width="6" viewBox="0 0 6 23">
+                            <defs>
+                                <linearGradient id="linear-gradient" x1="-284.35" y1="457.93" x2="-285.35" y2="457.43"
+                                    gradientTransform="matrix(0, 23, 6, 0, -2744, 6562)" gradientUnits="userSpaceOnUse">
+                                    <stop offset="0" stop-color="#1da2f4" />
+                                    <stop offset="1" stop-color="#0fedb2" />
+                                </linearGradient>
+                            </defs>
+                            <title>Polygon 17</title>
+                            <path id="Polygon_17" data-name="Polygon 17" class="cls-132 abs" d="M6,11.5,0,23V0Z" />
+                        </svg>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link <%= type === 'Zapier' ? 'active': '' %>" id="zapier-tab"  href="/integration/zapier" 
+                        aria-controls="zapier" aria-selected="false">Zapier
+                        <svg id="Layer_1" data-name="Layer 1" width="6" viewBox="0 0 6 23">
+                            <defs>
+                                <linearGradient id="linear-gradient" x1="-284.35" y1="457.93" x2="-285.35" y2="457.43"
+                                    gradientTransform="matrix(0, 23, 6, 0, -2744, 6562)" gradientUnits="userSpaceOnUse">
+                                    <stop offset="0" stop-color="#1da2f4" />
+                                    <stop offset="1" stop-color="#0fedb2" />
+                                </linearGradient>
+                            </defs>
+                            <title>Polygon 17</title>
+                            <path id="Polygon_17" data-name="Polygon 17" class="cls-132 abs" d="M6,11.5,0,23V0Z" />
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!----------------------END-VERTICAL-TABS----------------------------->
+        <!---------------------------FIRST-TABS--------------------------------->
+        <div class="col-md-8 integrations_right">
+            <div class="tab-content" id="myTabContent">
+                <% if(type === 'Email') { %>
+                <div class="fade show active" id="home"  aria-labelledby="home-tab"
+                    style="padding-bottom: 100px;">
+                    <%- include ('./Integrations/email') -%>
+                </div>
+                <% } else if (type === 'Domain') { %>
+                    <!----------------------------END-FIRST-TAB----------------------------------->
+                     <!------------------------------DOMAIN-TAB----------------------------->
+                
+                    <div class="fade show active" id="home"  aria-labelledby="home-tab"
+                        style="padding-bottom: 100px;">
+                        
+                        <div class="row">
+                            <div class="col-md-6 mt-3">
+                                <span class="email_integrations">Your Linked Domains</span>
+                            </div>
+                            <div class="col-md-6 mt-4">
+                                <div class="search_form_integrations">
+                                    <form action="#">
+                                        <span class="form-control-feedback_integrations"><img src="/images/search_icon.png"
+                                                id="search_img" alt="search"></span>
+                                        <input type="text" name="search" class="form-control" placeholder="Search Domains"
+                                            id="integration">
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <div class="card-body_new">
+                                <div class="table-responsive">
+                                    <table class="table table-borderless custom_table_new">
+                                        <thead class="thead_border">
+                                            <tr>
+                                                <th>
+                                                    <div class="btn-group">
+                                                        <button type="button"
+                                                            class="btn dropdown-toggle font-weight-bold custom_table"
+                                                            data-toggle="dropdown">
+                                                            Domain
+                                                        </button>
+                                                    </div>
+                                                </th>
+                                                <th>
+                                                    <div class="btn-group">
+                                                        <button type="button"
+                                                            class="btn dropdown-toggle font-weight-bold custom_table">
+                                                            Linked To:
+                                                        </button>
+                                                    </div>
+                                                </th>
+                                                <th>
+                                                    <div class="btn-group">
+                                                        <button type="button" class="btn font-weight-bold custom_table">
+                                                            Edit
+                                                        </button>
+                                                    </div>
+                                                </th>
+                                                <th>
+                                                    <div class="btn-group">
+                                                        <button type="button" class="btn  font-weight-bold custom_table"
+                                                            data-toggle="dropdown">
+                                                            Delete
+                                                        </button>
+                                                    </div>
+                                                </th>
+    
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <% for(let i=1; i<=9; i++){ %>
+                                            <tr>
+                                                <td class="post_content_table">
+                                                    <a href="#" class="domain_name"><span>Joe Dickinson.com</span></a>
+                                                </td>
+                                                <td class="post_email"><a href="#" class="domain_name"><u>Funnel
+                                                            Name</u></a></td>
+                                                <td class="post_phone"><a href="#" class="domain_name"><u>Edit</u></u> </td>
+                                                <td class="post_source"><a href="#" class="domain_name"><u>Delete</u></a>
+                                                </td>
+                                            </tr>
+                                            <% } %>
+    
+                                        </tbody>
+    
+                                    </table>
+                                    <a href="#" class="zapier_btn"><button class="z-style btn center-btn"
+                                            style="padding: 6px!important; margin-bottom:28px;">
+                                            <img src="/images/Add_new_intigration.svg"
+                                                style=" margin-bottom:1.5%;padding-right: 10px;" width="20%">ADD NEW DOMAIN
+                                        </button></a>
+    
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                <% }  else if (type === 'Payment') { %>
+                    <!--------------------------END-DOMAIN-TAB-------------------------------->
+                    <!----------------------------PAYMENT-GATEWAY----------------------------->
+                
+                    <div class="fade show active" 
+                    style="padding-bottom: 100px;">
+                    <%- include ('./Integrations/payment') -%>
+
+                    </div>
+                <% } else if (type === 'Zapier') {%>
+                    <!-------------------------END-PAYMENT-GATEWAY------------------------------->
+                    <!------------------------ZAPIER------------------------>
+            
+                    <div class="fade show active" 
+                    style="padding-bottom: 100px;">
+                    <div class="row mt-5 mb-5">
+                        <div class="col-md-3">
+                            <div class="div-style">
+                                <img class="img-class" src="/images/zapier_1.svg" width="53px">
+                                <h6 class="text-center" style="margin-top: 12%;font-weight: 600;">Zapier</h6>
+                            </div>
+                            <p class="status">Status: <img src="/images/Ellipse 23.svg"> Connected</p>
+                        </div>
+                        <div class="col-md-9">
+                            <p class="zapier_content">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+                                nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+                                voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+                                gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
+                                amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+                                dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
+                                dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
+                                dolor sit amet</p>
+                            <a href="#"><button class="z-style btn">OPEN ZAPIER</button></a>
+                        </div>
+                        <div class="col-md-12 m-top">
+                            <p class="text-center">Have Questions?</p>
+                            <a href="#" class="zapier_btn"><button class="z-style btn center-btn"
+                                    style="padding: 8px 12px 8px 12px !important;"><img src="/images/watch_tutorial.svg"
+                                        width="35px" style=" margin-bottom:1.5%;padding-right: 6px;"> WATCH
+                                    TUTORIAL</button></a>
+                        </div>
+                    </div>
+
+                    </div>
+                <%} %> 
+                
+            </div>
+        </div>
+
+        <!-----------------------END-FIRST-TAB--------------------------------->
+        <!----------------------------------------------------------->
+
+        <!------------------------------------------------->
+    </div>
+</div>
+
+<!-- Modal -->
+<div id="apiKeyModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-dialog-centered">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title"></h4>
+            </div>
+            <div class="modal-body">
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default border text-danger" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- End Modal -->
+
+<!--------------------FOOTER----------------->
+<div class="row">
+    <div class="col-md-12 msg_box">
+        <div class="img_box">
+            <img src="/images/Group_63.png" alt="Generic placeholder image">
+            <span>Need help?</span>
+            <p>Chat with live support.</p>
+        </div>
+    </div>
+</div>
+<!-------------------------END-FOOTER----------------------->
+
+<link rel="stylesheet" href="css/integrations.css">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+<script src="js/swal.js"></script>
+<script src="js/integrations/common.js"></script>
+<script src="js/integrations/inputs.js"></script>
+<script src="js/integrations/email.js"></script>
+<script src="js/integrations/payment.js"></script>
+
+
+

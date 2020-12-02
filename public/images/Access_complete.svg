@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="191.001" height="126" viewBox="0 0 191.001 126">
+  <defs>
+    <filter id="Rectangle_1138" x="55.001" y="0" width="136" height="92" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#f0f0f0"/>
+    </linearGradient>
+    <filter id="Union_5" x="25" y="18.001" width="152.002" height="92.999" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-2"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Union_6" x="0" y="33.001" width="152.002" height="92.999" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-3"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_628" data-name="Group 628" transform="translate(35.061 6.07)">
+    <g transform="matrix(1, 0, 0, 1, -35.06, -6.07)" filter="url(#Rectangle_1138)">
+      <rect id="Rectangle_1138-2" data-name="Rectangle 1138" width="118" height="74" transform="translate(64 6)" fill="#0fedb2"/>
+    </g>
+    <rect id="Rectangle_1144" data-name="Rectangle 1144" width="114" height="70" transform="translate(30.94 1.93)" fill="url(#linear-gradient)"/>
+    <g transform="matrix(1, 0, 0, 1, -35.06, -6.07)" filter="url(#Union_5)">
+      <path id="Union_5-2" data-name="Union 5" d="M-1,75V0H116.375V41.2h8.313V35.916L133,45.423l-8.312,9.507V48.592h-8.313V75Z" transform="translate(35 24)" fill="#00ffeb"/>
+    </g>
+    <rect id="Rectangle_1143" data-name="Rectangle 1143" width="113" height="70" transform="translate(0.94 20.93)" fill="url(#linear-gradient)"/>
+    <g transform="matrix(1, 0, 0, 1, -35.06, -6.07)" filter="url(#Union_6)">
+      <path id="Union_6-2" data-name="Union 6" d="M-1,75V0H116.375V41.2h8.313V35.916L133,45.423l-8.312,9.507V48.592h-8.313V75Z" transform="translate(10 39)" fill="#29b5ff"/>
+    </g>
+    <rect id="Rectangle_1160" data-name="Rectangle 1160" width="113" height="70" transform="translate(-24.06 35.93)" fill="url(#linear-gradient)"/>
+  </g>
+</svg>

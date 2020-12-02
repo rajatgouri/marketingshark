@@ -1,0 +1,87 @@
+<%- include('../Partials/header.ejs') %>
+<div class="toast" data-autohide="false">
+  <div class="toast-header">
+    <strong class="mr-auto text-danger">Warning</strong>
+    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">
+      &times;
+    </button>
+  </div>
+  <div class="toast-body">Please verify your account!</div>
+</div>
+<div class="container main_div">
+  <div class="col-md-12 text-center main_title">
+    <h4 class="header-title p_4">Hi, <%= username %></h4>
+    <p class="p_2">Whare would you like to start?</p>
+  </div>
+  <div class="row main_2">
+    <div class="col-lg-6 homeContent">
+      <a href="/templates" class="home_a" style="text-decoration: none;">
+        <img
+          src="/images/label.svg"
+          width="90"
+          alt="label"
+          style="position: absolute; margin-left: -16px; margin-top: 22px;"
+        />
+        <div class="text-center main_box">
+          <img
+            src="/images/Access_complete.svg"
+            width="200"
+            alt="access"
+          /><br />
+          <hr />
+          <p class="p_3 mb-1">Access Complete <br />Funnel Templates</p>
+          Difficulty Level: Beginner
+          <p class="p_2 mt-1">
+            Access our fully built, pre-made funnels that are 99% done! All you
+            need to do is make some minor edits(if you choose),and start using
+            these turn key funnels immediately!
+          </p>
+        </div>
+      </a>
+    </div>
+    <div class="col-lg-6 homeContent">
+      <div class="text-center main_box">
+        <div
+          onclick="modelFunnelName(this)"
+          class="home_a"
+          data-path=""
+          style="text-decoration: none; cursor: pointer;"
+        >
+          <img src="/images/Build_A_funnel.svg" width="120" /><br />
+          <hr />
+          <p class="p_3 mb-1">Build A Funnel<br />From Scratch</p>
+          Difficulty Level: Intermediate/Expert
+          <p class="p_2 mt-2">
+            For the designers, builders and experienced members! Select this
+            option and start with a blank canvas!
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row bottom">
+    <div class="col-md-6 bottom_left">
+      <a href="/billing_details"><u>Upgrade Now</u></a>
+    </div>
+    <div class="col-md-6 bottom_right">
+      <a href="/templates"><u>All funnel templates</u></a> &nbsp;
+      <a
+        onclick="modelFunnelName(this)"
+        data-path=""
+        style="cursor: pointer;"
+      >
+        <u>Start from blank page</u>
+      </a>
+    </div>
+  </div>
+</div>
+<%- include('../Partials/funnelForm.ejs') %>
+<!----container-->
+<%- include('../Partials/footer.ejs') %> <% if(verify){%>
+<script>
+  $(document).ready(function () {
+    $('.toast').toast('show');
+  });
+</script>
+<% } %>
+<script src="/js/funnel.js"></script>
